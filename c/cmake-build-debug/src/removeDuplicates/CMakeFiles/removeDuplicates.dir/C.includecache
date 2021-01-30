@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/gao/work/code/personal/demo/leetcode/c/src/removeDuplicates/removeDuplicates.c
+removeDuplicates.h
+/Users/gao/work/code/personal/demo/leetcode/c/src/removeDuplicates/removeDuplicates.h
+stdio.h
+/Users/gao/work/code/personal/demo/leetcode/c/src/removeDuplicates/stdio.h
+
+/Users/gao/work/code/personal/demo/leetcode/c/src/removeDuplicates/removeDuplicates.h
+
