@@ -1,18 +1,20 @@
 package defangIPaddr
 
+import "bytes"
+
 //https://leetcode-cn.com/problems/defanging-an-ip-address/
 func defangIPaddr(address string) string {
-	var ans []byte
+	var ans bytes.Buffer
 
 	for i := 0; i < len(address); i++ {
 		if address[i] == 46 {
-			ans = append(ans, 91)
-			ans = append(ans, 46)
-			ans = append(ans, 93)
+			ans.WriteByte(91)
+			ans.WriteByte(46)
+			ans.WriteByte(93)
 		} else {
-			ans = append(ans, address[i])
+			ans.WriteByte(address[i])
 		}
 	}
 
-	return string(ans)
+	return ans.String()
 }
