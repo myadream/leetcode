@@ -2,5 +2,5 @@ package myAtoi
 
 
 func myAtoi(s string) int {
-
+	return 0
 }
