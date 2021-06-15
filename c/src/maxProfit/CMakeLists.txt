@@ -1,0 +1,1 @@
+add_executable(maxProfit main.c maxProfit.c maxProfit.h)
