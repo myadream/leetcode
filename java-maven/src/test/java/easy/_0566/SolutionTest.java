@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class SolutionTest extends DataSetControl {
     Solution solution = new Solution();
@@ -23,16 +23,16 @@ class SolutionTest extends DataSetControl {
     @Override
     public ArrayList<DataSet> buildDataSet() {
         ArrayList<DataSet> datasets = new ArrayList<>();
-        Assist assist = new Assist(1, 4);
+        Assist assist = new Assist(0, 0);
 
         datasets.add(new DataSet(
-                new int[][]{{1, 2, 3, 4}},
                 new int[][]{{1, 2}, {3, 4}},
-                assist
+                new int[][]{{1, 2, 3, 4}},
+                assist.copy(1, 4)
         ));
 
         datasets.add(new DataSet(
-                new int[][]{{1, 2, 3, 4}},
+                new int[][]{{1, 2}, {3, 4}},
                 new int[][]{{1, 2}, {3, 4}},
                 assist.copy(2, 4)
         ));
@@ -48,7 +48,7 @@ class SolutionTest extends DataSetControl {
         impls.add(
                 dataSet -> {
                     Assist assist = (Assist) dataSet.getAssist();
-                    assertEquals(dataSet.getTarget(), solution.matrixReshape(
+                    assertArrayEquals((int[][]) dataSet.getTarget(), solution.matrixReshape(
                             (int[][]) dataSet.getSample(),
                             assist.getR(),
                             assist.getC()
