@@ -4,6 +4,7 @@ import easy.DataSet;
 import easy.DataSetControl;
 import kotlin.jvm.functions.Function1;
 import org.jetbrains.annotations.NotNull;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,6 +15,11 @@ class SolutionTest extends DataSetControl {
 
     Solution solution = new Solution();
 
+    @Test
+    void main() {
+        this.run();
+    }
+
     @NotNull
     @Override
     public ArrayList<DataSet> buildDataSet() {
@@ -22,7 +28,7 @@ class SolutionTest extends DataSetControl {
         dataSets.add(
                 new DataSet(
                         5,
-                        Arrays.stream((new int[][]{{1}, {1, 1}, {1, 2, 1}, {1, 3, 3, 1}, {1, 4, 6, 4, 1}})).toList()
+                        new int[][]{{1}, {1, 1}, {1, 2, 1}, {1, 3, 3, 1}, {1, 4, 6, 4, 1}}
                 )
         );
 
@@ -52,6 +58,6 @@ class SolutionTest extends DataSetControl {
                 }
         );
 
-        return null;
+        return impls;
     }
 }
