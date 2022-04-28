@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="single">
+    <test name="_0905">
+        <classes>
+            <class name="easy._0905.SolutionTest"/>
+        </classes>
+    </test>
+</suite>

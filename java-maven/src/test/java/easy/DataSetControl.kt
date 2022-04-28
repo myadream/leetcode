@@ -1,7 +1,6 @@
 package easy
 
 import org.junit.Test
-import org.testng.annotations.BeforeSuite
 
 //val intFunction = {dataSet: DataSet -> Any}
 
@@ -9,9 +8,9 @@ import org.testng.annotations.BeforeSuite
 abstract class DataSetControl {
     abstract fun buildDataSet(): ArrayList<DataSet>
 
-    abstract fun buildImpl(): ArrayList<(DataSet)->Any>
+    abstract fun buildImpl(): ArrayList<(DataSet) -> Any>
 
-    @BeforeSuite
+    @Test
     fun run() {
         for (f: (DataSet) -> Any in buildImpl()) {
             for (item: DataSet in buildDataSet()) {
