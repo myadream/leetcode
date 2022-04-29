@@ -1,10 +1,11 @@
 package easy._0053;
 
+import easy.DataSetControl;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SolutionTest {
+class SolutionTest  {
 
     Solution solution = new Solution();
 

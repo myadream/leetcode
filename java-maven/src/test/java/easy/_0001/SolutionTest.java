@@ -1,24 +1,49 @@
 package easy._0001;
 
-import org.junit.jupiter.api.Test;
+import easy.DataSet;
+import easy.DataSetControl;
+import kotlin.jvm.functions.Function1;
+import org.jetbrains.annotations.NotNull;
+import org.testng.annotations.Test;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-class SolutionTest {
+@Test(groups = {"tags.array", "tags.hashTable", "difficulty.easy"})
+class SolutionTest extends DataSetControl {
     Solution solution = new Solution();
 
-    @Test
-    void twoSum() {
-        int[] nums = new int[]{2, 7, 11, 15};
-        int target = 9;
-        int[] result = new int[]{0, 1};
+    @NotNull
+    @Override
+    public ArrayList<DataSet> buildDataSet() {
+        ArrayList<DataSet> dataSets = new ArrayList<>();
 
-        assertEquals(Arrays.toString(solution.twoSum(nums, target)), Arrays.toString(result));
+        dataSets.add(
+                new DataSet(
+                        new int[]{2, 7, 11, 14},
+                        new int[]{0, 1},
+                        new Assist(9)
+                )
+        );
+
+
+        return dataSets;
     }
 
-    @Test
-    void twoSum2() {
+    @NotNull
+    @Override
+    public ArrayList<Function1<DataSet, Object>> buildImpl() {
+        ArrayList<Function1<DataSet, Object>> impls = new ArrayList<>();
+
+        impls.add(
+                dataSet -> {
+                    Assist assist = (Assist) dataSet.getAssist();
+                    assertArrayEquals(solution.twoSum((int[]) dataSet.getSample(), assist.getTarget()), (int[]) dataSet.getTarget());
+                    return true;
+                }
+        );
+
+        return impls;
     }
 }

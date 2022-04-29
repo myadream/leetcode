@@ -4,14 +4,15 @@ import easy.DataSet;
 import easy.DataSetControl;
 import kotlin.jvm.functions.Function1;
 import org.jetbrains.annotations.NotNull;
-import org.testng.annotations.Tesvbt;
+import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@Test(groups = {"tags.array", "tags.two-pointers", "tags.Sorting", "difficulty.easy", "d-single"})
+@Test(groups = {"tags.array", "tags.two-pointers", "tags.Sorting", "difficulty.easy"})
 class SolutionTest extends DataSetControl {
+    Solution solution = new Solution();
 
     @NotNull
     @Override
@@ -40,6 +41,34 @@ class SolutionTest extends DataSetControl {
     public ArrayList<Function1<DataSet, Object>> buildImpl() {
         ArrayList<Function1<DataSet, Object>> impls = new ArrayList<>();
 
+        //暴力
+        impls.add(
+                dataSet -> {
+                    assertArrayEquals((int[]) dataSet.getTarget(), solution.sortArrayByParity((int[]) dataSet.getSample()));
+                    return true;
+                }
+        );
+//
+//        impls.add(
+//                dataSet -> {
+//                    assertArrayEquals((int[]) dataSet.getTarget(), solution.sortArrayByParity_2((int[]) dataSet.getSample()));
+//                    return true;
+//                }
+//        );
+
+//        impls.add(
+//                dataSet -> {
+//                    assertArrayEquals((int[]) dataSet.getTarget(), solution.sortArrayByParity_2_1((int[]) dataSet.getSample()));
+//                    return true;
+//                }
+//        );
+
+        impls.add(
+                dataSet -> {
+                    assertArrayEquals((int[]) dataSet.getTarget(), solution.sortArrayByParity_3((int[]) dataSet.getSample()));
+                    return true;
+                }
+        );
         return impls;
     }
 }

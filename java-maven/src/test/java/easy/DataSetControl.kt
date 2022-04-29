@@ -1,9 +1,6 @@
 package easy
 
-import org.junit.Test
-
-//val intFunction = {dataSet: DataSet -> Any}
-
+import org.testng.annotations.Test
 
 abstract class DataSetControl {
     abstract fun buildDataSet(): ArrayList<DataSet>
