@@ -1,27 +1,74 @@
 package easy._0053;
 
+import easy.DataSet;
 import easy.DataSetControl;
-import org.junit.jupiter.api.Test;
+import kotlin.jvm.functions.Function1;
+import org.jetbrains.annotations.NotNull;
+import org.testng.annotations.Test;
+
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SolutionTest  {
+@Test(groups = {"tags.array", "tags.divide-and-conquer", "tags.dynamic-programming", "difficulty.easy"})
+class SolutionTest extends DataSetControl {
 
     Solution solution = new Solution();
+    DivideAndConquer divideAndControl = new DivideAndConquer();
 
-    @Test
-    void maxSubArray() {
-        int[] nums = new int[]{-2,1,-3,4,-1,2,1,-5,4};
-        int result = solution.maxSubArray(nums);
+    @org.junit.jupiter.api.Test
+    void main() {
+        this.run();
+    }
 
-        assertEquals(6, result);
+    @NotNull
+    @Override
+    public ArrayList<DataSet> buildDataSet() {
+        ArrayList<DataSet> dataSets = new ArrayList<DataSet>();
+        dataSets.add(
+                new DataSet(
+                        new int[]{-2,1,-3,4,-1,2,1,-5,4},
+                        6
+                )
+        );
 
-        nums = new int[]{1};
-        result = solution.maxSubArray(nums);
-        assertEquals(1, result);
+        dataSets.add(
+                new DataSet(
+                        new int[]{5,4,-1,7,8},
+                        23
+                )
+        );
 
-        nums = new int[]{5,4,-1,7,8};
-        result = solution.maxSubArray(nums);
-        assertEquals(23, result);
+        dataSets.add(
+                new DataSet(
+                        new int[]{1},
+                        1
+                )
+        );
+        return dataSets;
+    }
+
+    @NotNull
+    @Override
+    public ArrayList<Function1<DataSet, Object>> buildImpl() {
+        ArrayList<Function1<DataSet, Object>> impls = new ArrayList<>();
+
+        //动态规划
+        impls.add(
+                dataSet -> {
+                    assertEquals(dataSet.getTarget(), solution.maxSubArray((int[]) dataSet.getSample()));
+                    return true;
+                }
+        );
+
+        //分治
+        impls.add(
+                dataSet -> {
+                    assertEquals(dataSet.getTarget(), divideAndControl.maxSubArray((int[]) dataSet.getSample()));
+                    return true;
+                }
+        );
+
+        return impls;
     }
 }

@@ -1,67 +1,117 @@
 package easy._0217;
 
-import org.junit.jupiter.api.Test;
+import easy.DataSet;
+import easy.DataSetControl;
+import kotlin.jvm.functions.Function1;
+import org.jetbrains.annotations.NotNull;
+import org.testng.annotations.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.ArrayList;
 
-class SolutionTest {
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+@Test(groups = {"tags.array", "tags.hashTable", "tags.sorting", "difficulty.easy"})
+class SolutionTest extends DataSetControl {
 
     Solution solution = new Solution();
 
-    @Test
-    void containsDuplicate() {
-        int[] nums = new int[] {1,2,3,1};
-        boolean result = solution.containsDuplicate(nums);
-
-        assertTrue(result);
-
-        nums = new int[]{1,2,3,4};
-        result = solution.containsDuplicate(nums);
-
-        assertFalse(result);
-
-
-        nums = new int[]{1,1,1,3,3,4,3,2,4,2};
-        result = solution.containsDuplicate(nums);
-
-        assertTrue(result);
+    @org.junit.jupiter.api.Test
+    void main() {
+        this.run();
     }
 
-    @Test
-    void containsDuplicate1() {
-        int[] nums = new int[] {1,2,3,1};
-        boolean result = solution.containsDuplicate1(nums);
 
-        assertTrue(result);
+    @NotNull
+    @Override
+    public ArrayList<DataSet> buildDataSet() {
+        ArrayList<DataSet> dataSets = new ArrayList<DataSet>();
 
-        nums = new int[]{1,2,3,4};
-        result = solution.containsDuplicate1(nums);
+        dataSets.add(
+                new DataSet(
+                        new int[]{1, 2, 3, 1},
+                        true
+                )
+        );
 
-        assertFalse(result);
+        dataSets.add(
+                new DataSet(
+                        new int[]{1, 2, 3, 4},
+                        false
+                )
+        );
 
+        dataSets.add(
+                new DataSet(
+                        new int[]{1, 1, 1, 3, 3, 4, 3, 2, 4, 2},
+                        true
+                )
+        );
 
-        nums = new int[]{1,1,1,3,3,4,3,2,4,2};
-        result = solution.containsDuplicate1(nums);
-
-        assertTrue(result);
+        return dataSets;
     }
 
-    @Test
-    void containsDuplicate2() {
-        int[] nums = new int[] {1,2,3,1};
-        boolean result = solution.containsDuplicate2(nums);
+    @NotNull
+    @Override
+    public ArrayList<Function1<DataSet, Object>> buildImpl() {
+        ArrayList<Function1<DataSet, Object>> impls = new ArrayList<>();
 
-        assertTrue(result);
+        impls.add(
+                dataSet -> {
+                    Boolean target = (Boolean) dataSet.getTarget();
 
-        nums = new int[]{1,2,3,4};
-        result = solution.containsDuplicate2(nums);
+                    if (target) {
+                        assertTrue(solution.containsDuplicate((int[]) dataSet.getSample()));
+                    } else {
+                        assertFalse(solution.containsDuplicate((int[]) dataSet.getSample()));
+                    }
 
-        assertFalse(result);
+                    return true;
+                }
+        );
 
+        impls.add(
+                dataSet -> {
+                    Boolean target = (Boolean) dataSet.getTarget();
 
-        nums = new int[]{1,1,1,3,3,4,3,2,4,2};
-        result = solution.containsDuplicate2(nums);
+                    if (target) {
+                        assertTrue(solution.containsDuplicate2((int[]) dataSet.getSample()));
+                    } else {
+                        assertFalse(solution.containsDuplicate2((int[]) dataSet.getSample()));
+                    }
 
-        assertTrue(result);
+                    return true;
+                }
+        );
+
+        impls.add(
+                dataSet -> {
+                    Boolean target = (Boolean) dataSet.getTarget();
+
+                    if (target) {
+                        assertTrue(solution.containsDuplicate3((int[]) dataSet.getSample()));
+                    } else {
+                        assertFalse(solution.containsDuplicate3((int[]) dataSet.getSample()));
+                    }
+
+                    return true;
+                }
+        );
+
+        impls.add(
+                dataSet -> {
+                    Boolean target = (Boolean) dataSet.getTarget();
+
+                    if (target) {
+                        assertTrue(solution.containsDuplicate4((int[]) dataSet.getSample()));
+                    } else {
+                        assertFalse(solution.containsDuplicate4((int[]) dataSet.getSample()));
+                    }
+
+                    return true;
+                }
+        );
+
+        return impls;
     }
 }
