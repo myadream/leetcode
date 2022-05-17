@@ -48,20 +48,20 @@ class SolutionTest extends DataSetControl {
                     return true;
                 }
         );
-//
-//        impls.add(
-//                dataSet -> {
-//                    assertArrayEquals((int[]) dataSet.getTarget(), solution.sortArrayByParity_2((int[]) dataSet.getSample()));
-//                    return true;
-//                }
-//        );
 
-//        impls.add(
-//                dataSet -> {
-//                    assertArrayEquals((int[]) dataSet.getTarget(), solution.sortArrayByParity_2_1((int[]) dataSet.getSample()));
-//                    return true;
-//                }
-//        );
+        impls.add(
+                dataSet -> {
+                    assertArrayEquals((int[]) dataSet.getTarget(), solution.sortArrayByParity_2((int[]) dataSet.getSample()));
+                    return true;
+                }
+        );
+
+        impls.add(
+                dataSet -> {
+                    assertArrayEquals((int[]) dataSet.getTarget(), solution.sortArrayByParity_2_1((int[]) dataSet.getSample()));
+                    return true;
+                }
+        );
 
         impls.add(
                 dataSet -> {

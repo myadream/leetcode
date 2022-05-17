@@ -1,4 +1,4 @@
-package easy._0001;
+package easy._0088;
 
 import easy.DataSet;
 import easy.DataSetControl;
@@ -9,9 +9,11 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@Test(groups = {"tags.array", "tags.hashTable", "difficulty.easy"})
+@Test(groups = {"tags.array", "tags.two-pointers", "tags.Sorting", "difficulty.easy"})
 class SolutionTest extends DataSetControl {
+
     Solution solution = new Solution();
 
     @org.junit.jupiter.api.Test
@@ -22,16 +24,25 @@ class SolutionTest extends DataSetControl {
     @NotNull
     @Override
     public ArrayList<DataSet> buildDataSet() {
-        ArrayList<DataSet> dataSets = new ArrayList<>();
+        ArrayList<DataSet> dataSets = new ArrayList<DataSet>();
+        Assist assist = new Assist(0, 0, new int[]{});
 
         dataSets.add(
                 new DataSet(
-                        new int[]{2, 7, 11, 14},
-                        new int[]{0, 1},
-                        new Assist(9)
+                        new int[]{1, 2, 3, 0, 0, 0},
+                        new int[]{1, 2, 2, 3, 5, 6},
+                        assist.copy(3, 2, new int[]{2, 5, 6})
                 )
         );
 
+
+        dataSets.add(
+                new DataSet(
+                        new int[]{1, 2, 3, 0, 0, 0},
+                        new int[]{1, 2, 2, 3, 5, 6},
+                        assist.copy(3, 2, new int[]{2, 5, 6})
+                )
+        );
 
         return dataSets;
     }
@@ -44,18 +55,14 @@ class SolutionTest extends DataSetControl {
         impls.add(
                 dataSet -> {
                     Assist assist = (Assist) dataSet.getAssist();
-                    assertArrayEquals(solution.twoSum((int[]) dataSet.getSample(), assist.getTarget()), (int[]) dataSet.getTarget());
+                    int[] nums = (int[]) dataSet.getSample();
+                    solution.merge((int[]) nums, assist.getM(), assist.getNums(), assist.getN());
+                    assertArrayEquals((int[]) dataSet.getTarget(), nums);
+
                     return true;
                 }
         );
 
-        impls.add(
-                dataSet -> {
-                    Assist assist = (Assist) dataSet.getAssist();
-                    assertArrayEquals(solution.twoSum2((int[]) dataSet.getSample(), assist.getTarget()), (int[]) dataSet.getTarget());
-                    return true;
-                }
-        );
 
         return impls;
     }

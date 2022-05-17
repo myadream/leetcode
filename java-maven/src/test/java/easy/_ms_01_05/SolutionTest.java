@@ -59,5 +59,7 @@ class SolutionTest extends DataSetControl {
                 }
         );
 
+
+        return impls;
     }
 }

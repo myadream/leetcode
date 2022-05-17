@@ -10,5 +10,7 @@ public class Solution {
 
         while (left < second.length()) {
         }
+
+        return false;
     }
 }
