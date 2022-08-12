@@ -8,8 +8,6 @@ import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @Test(groups = {"tags.recursion", "tags.linked-list", "tags.math", "difficulty.medium"})
 class SolutionTest extends DataSetControl {
 
@@ -26,15 +24,15 @@ class SolutionTest extends DataSetControl {
         Assist assist = new Assist(new int[]{}, new int[]{});
 
         dataSets.add(
-                new DataSet(new int[]{},new int[]{7,0,8}, assist.copy(new int[]{2,4,3}, new int[]{5,6,4}))
+                new DataSet(new int[]{}, new int[]{7, 0, 8}, assist.copy(new int[]{2, 4, 3}, new int[]{5, 6, 4}))
         );
 
         dataSets.add(
-                new DataSet(new int[]{},new int[]{0}, assist.copy(new int[]{0}, new int[]{0}))
+                new DataSet(new int[]{}, new int[]{0}, assist.copy(new int[]{0}, new int[]{0}))
         );
 
         dataSets.add(
-                new DataSet(new int[]{},new int[]{0}, assist.copy(new int[]{9,9,9,9,9,9,9}, new int[]{9,9,9,9}))
+                new DataSet(new int[]{}, new int[]{0}, assist.copy(new int[]{9, 9, 9, 9, 9, 9, 9}, new int[]{9, 9, 9, 9}))
         );
 
         return dataSets;
@@ -49,28 +47,34 @@ class SolutionTest extends DataSetControl {
                 item -> {
 
                     Assist assist = (Assist) item.getAssist();
+                    Solution.ListNode temp;
 
-                    Solution.ListNode L1 = new Solution.ListNode();
-                    for (int i:assist.getL1()) {
-                       L1.val = i;
-                       L1.next = new Solution.ListNode();
+                    Solution.ListNode L1 = temp = new Solution.ListNode();
+                    for (int i : assist.getL1()) {
+                        temp.next = new Solution.ListNode(i);
+                        temp = temp.next;
                     }
 
-                    Solution.ListNode L2 = new Solution.ListNode();
-                    for (int i:assist.getL2()) {
-                       L2.val = i;
-                       L2.next = new Solution.ListNode();
+                    Solution.ListNode L2 = temp = new Solution.ListNode();
+                    for (int i : assist.getL2()) {
+                        temp.next = new Solution.ListNode(i);
+                        temp = temp.next;
                     }
 
-                    L1.next = null;
-                    L2.next = null;
+                    Solution.ListNode L3 = temp = new Solution.ListNode();
+                    for (int i : assist.getL2()) {
+                        temp.next = new Solution.ListNode(i);
+                        temp = temp.next;
+                    }
 
-                    Solution.ListNode listNode = (new Solution()).addTwoNumbers(L1, L2);
+                    Solution.ListNode listNode = (new Solution()).addTwoNumbers(L1.next, L2.next);
 
                     while (listNode.next != null) {
-                       System.out.println(listNode);
-                       listNode = listNode.next;
+                        System.out.println(listNode.val);
+                        listNode = listNode.next;
                     }
+
+                                            System.out.println("========");
 
                     return true;
                 }

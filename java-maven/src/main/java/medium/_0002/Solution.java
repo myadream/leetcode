@@ -1,40 +1,32 @@
 package medium._0002;
 
-import java.util.List;
-
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode tail;
+        ListNode head = tail = new ListNode();
         int beyond = 0;
-        ListNode sum = new ListNode();
-        return sum(l1, l2 , sum, beyond);
-    }
+        while (l1 != null || l2 != null || tail.val > 0) {
 
-    private ListNode sum(ListNode l1, ListNode l2, ListNode head, int beyond) {
-        //双节点都为空
-        if (l1 == null && l2 == null) {
-            return head;
+            System.out.println((l1 != null ? l1.val : 0) +"---"+ (l2 != null ? l2.val : 0) +"---"+ beyond);
+
+            tail.val += l1 != null ? l1.val : 0;
+            tail.val += l2 != null ? l2.val : 0;
+
+            if (tail.val >= 10) {
+                tail.val %= 10;
+                beyond = 1;
+            } else {
+                beyond = 0;
+            }
+
+            //双节点都为空
+            l1 = l1 == null ? null : l1.next;
+            l2 = l2 == null ? null : l2.next;
+            tail.next = new ListNode(beyond);
+            tail = tail.next;
         }
 
-        int amount = beyond;
-        if (l1 != null) {
-            amount += l1.val;
-        }
-
-        if (l2 != null) {
-           amount += l2.val;
-        }
-
-        if (amount >= 10) {
-            amount >>= 1;
-            beyond = 1;
-        } else {
-            beyond = 0;
-        }
-
-        head.val = amount;
-        head.next = new ListNode(0);
-
-        return sum(l1.next, l2.next, head, beyond);
+        return head;
     }
 
     public static class ListNode {
