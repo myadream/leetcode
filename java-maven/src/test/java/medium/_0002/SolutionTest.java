@@ -3,6 +3,7 @@ package medium._0002;
 import easy.DataSet;
 import easy.DataSetControl;
 import kotlin.jvm.functions.Function1;
+import org.apache.commons.lang3.ArrayUtils;
 import org.jetbrains.annotations.NotNull;
 import org.testng.annotations.Test;
 
@@ -47,6 +48,7 @@ class SolutionTest extends DataSetControl {
                 item -> {
 
                     Assist assist = (Assist) item.getAssist();
+
                     Solution.ListNode temp;
 
                     Solution.ListNode L1 = temp = new Solution.ListNode();
@@ -72,6 +74,7 @@ class SolutionTest extends DataSetControl {
                     while (listNode.next != null) {
                         System.out.println(listNode.val);
                         listNode = listNode.next;
+
                     }
 
                                             System.out.println("========");
