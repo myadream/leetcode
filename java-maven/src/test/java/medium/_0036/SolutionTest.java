@@ -1,7 +1,7 @@
 package medium._0036;
 
-import easy.DataSet;
-import easy.DataSetControl;
+import common.DataSet;
+import common.DataSetControl;
 import kotlin.jvm.functions.Function1;
 import org.jetbrains.annotations.NotNull;
 import org.testng.annotations.Test;
@@ -14,11 +14,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @Test(groups = {"tags.array", "tags.hashTable", "tags.matrix", "difficulty.medium"})
 class SolutionTest extends DataSetControl {
     Solution solution = new Solution();
-
-    @org.junit.jupiter.api.Test
-    void main() {
-        this.run();
-    }
 
     @NotNull
     @Override

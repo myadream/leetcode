@@ -1,17 +1,16 @@
-package easy._ms_01_05;
+package easy._0020;
 
 import common.DataSet;
 import common.DataSetControl;
 import kotlin.jvm.functions.Function1;
 import org.jetbrains.annotations.NotNull;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@Test(groups = {"tags.two-pointers", "tags.string", "difficult-easy"})
+@Test(groups = {"tags.stack", "tags.string", "difficulty.easy"})
 class SolutionTest extends DataSetControl {
 
     Solution solution = new Solution();
@@ -20,22 +19,36 @@ class SolutionTest extends DataSetControl {
     @Override
     public ArrayList<DataSet> buildDataSet() {
         ArrayList<DataSet> dataSets = new ArrayList<>();
-        Assist assist = new Assist("");
-        dataSets.add(
+
+               dataSets.add(
                 new DataSet(
-                        "pale",
-                        true,
-                        assist.copy("ple")
+                        "(([]){})",
+                        true
                 )
         );
 
         dataSets.add(
                 new DataSet(
-                        "pales",
-                        false,
-                        assist.copy("pal")
+                        "()",
+                        true
                 )
         );
+
+        dataSets.add(
+                new DataSet(
+                        "()[]{}",
+                        true
+                )
+        );
+
+        dataSets.add(
+                new DataSet(
+                        "(]",
+                        false
+                )
+        );
+
+
 
 
         return dataSets;
@@ -44,17 +57,15 @@ class SolutionTest extends DataSetControl {
     @NotNull
     @Override
     public ArrayList<Function1<DataSet, Object>> buildImpl() {
-        ArrayList<Function1<DataSet, Object>> impls = new ArrayList<>();
 
+        ArrayList<Function1<DataSet, Object>> impls = new ArrayList<>();
         impls.add(
                 dataSet -> {
-
-                    if ((Boolean) dataSet.getTarget()) {
-                        assertTrue(solution.oneEditAway((String) dataSet.getSample(), ((Assist) dataSet.getTarget()).getEditString()));
+                    if ((boolean) dataSet.getTarget()) {
+                        Assert.assertTrue(solution.isValid((String) dataSet.getSample()));
                     } else {
-                        assertFalse(solution.oneEditAway((String) dataSet.getSample(), ((Assist) dataSet.getTarget()).getEditString()));
+                        Assert.assertFalse(solution.isValid((String) dataSet.getSample()));
                     }
-
                     return true;
                 }
         );

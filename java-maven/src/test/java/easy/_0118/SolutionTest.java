@@ -1,10 +1,9 @@
 package easy._0118;
 
-import easy.DataSet;
-import easy.DataSetControl;
+import common.DataSet;
+import common.DataSetControl;
 import kotlin.jvm.functions.Function1;
 import org.jetbrains.annotations.NotNull;
-import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
@@ -13,11 +12,6 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 class SolutionTest extends DataSetControl {
 
     Solution solution = new Solution();
-
-    @Test
-    void main() {
-        this.run();
-    }
 
     @NotNull
     @Override

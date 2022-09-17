@@ -1,7 +1,7 @@
 package medium._0713;
 
-import easy.DataSet;
-import easy.DataSetControl;
+import common.DataSet;
+import common.DataSetControl;
 import kotlin.jvm.functions.Function1;
 import org.jetbrains.annotations.NotNull;
 import org.testng.annotations.Test;
@@ -12,11 +12,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Test(groups = {"tags-array", "tags-slidingWindow", "difficulty.medium"})
 class SolutionTest extends DataSetControl {
-
-    @org.junit.jupiter.api.Test
-    void main() {
-        this.run();
-    }
 
     Solution solution = new Solution();
 

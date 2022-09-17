@@ -1,17 +1,17 @@
-package easy._0001;
+package medium._0003;
 
 import common.DataSet;
 import common.DataSetControl;
 import kotlin.jvm.functions.Function1;
 import org.jetbrains.annotations.NotNull;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-
-@Test(groups = {"tags.array", "tags.hashTable", "difficulty.easy"})
+@Test(groups = {"tags.String", "tags.hashTable", "tags.slidingWindow", "difficulty.medium"})
 class SolutionTest extends DataSetControl {
+
     Solution solution = new Solution();
 
     @NotNull
@@ -21,12 +21,25 @@ class SolutionTest extends DataSetControl {
 
         dataSets.add(
                 new DataSet(
-                        new int[]{2, 7, 11, 14},
-                        new int[]{0, 1},
-                        new Assist(9)
+                        "abcabcbb",
+                        3
                 )
         );
 
+
+        dataSets.add(
+                new DataSet(
+                        "bbbbb",
+                        1
+                )
+        );
+
+        dataSets.add(
+                new DataSet(
+                        "pwwkew",
+                        3
+                )
+        );
 
         return dataSets;
     }
@@ -38,16 +51,7 @@ class SolutionTest extends DataSetControl {
 
         impls.add(
                 dataSet -> {
-                    Assist assist = (Assist) dataSet.getAssist();
-                    assertArrayEquals(solution.twoSum((int[]) dataSet.getSample(), assist.getTarget()), (int[]) dataSet.getTarget());
-                    return true;
-                }
-        );
-
-        impls.add(
-                dataSet -> {
-                    Assist assist = (Assist) dataSet.getAssist();
-                    assertArrayEquals(solution.twoSum2((int[]) dataSet.getSample(), assist.getTarget()), (int[]) dataSet.getTarget());
+                    Assert.assertEquals(solution.lengthOfLongestSubstring((String) dataSet.getSample()), dataSet.getTarget());
                     return true;
                 }
         );

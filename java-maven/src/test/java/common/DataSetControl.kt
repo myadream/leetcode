@@ -1,4 +1,4 @@
-package easy
+package common
 
 import org.testng.annotations.Test
 import java.util.*
@@ -7,6 +7,11 @@ abstract class DataSetControl {
     abstract fun buildDataSet(): ArrayList<DataSet>
 
     abstract fun buildImpl(): ArrayList<(DataSet) -> Any>
+
+    @org.junit.jupiter.api.Test
+    fun main() {
+        this.run();
+    }
 
     @Test
     fun run() {

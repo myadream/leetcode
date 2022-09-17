@@ -1,16 +1,15 @@
-package easy._1470;
+package easy._0704;
 
 import common.DataSet;
 import common.DataSetControl;
 import kotlin.jvm.functions.Function1;
 import org.jetbrains.annotations.NotNull;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-
-@Test(groups = {"tags.array", "difficulty.easy"})
+@Test(groups = {"tags.binarySearch", "tags.string", "difficulty.easy"})
 class SolutionTest extends DataSetControl {
     Solution solution = new Solution();
 
@@ -18,29 +17,37 @@ class SolutionTest extends DataSetControl {
     @Override
     public ArrayList<DataSet> buildDataSet() {
         ArrayList<DataSet> dataSets = new ArrayList<>();
+        Assist assist = new Assist(new int[0], 0);
 
         dataSets.add(
                 new DataSet(
-                        new int[]{},
-                        new int[]{2, 3, 5, 4, 1, 7},
-                        new Assist(new int[]{2, 5, 1, 3, 4, 7}, 3)
-                )
-        );
-
-
-        dataSets.add(
-                new DataSet(
-                        new int[]{},
-                        new int[]{1, 4, 2, 3, 3, 2, 4, 1},
-                        new Assist(new int[]{1, 2, 3, 4, 4, 3, 2, 1}, 4)
+                        "",
+                        0,
+                        assist.copy(new int[]{-1, 0, 5}, -1)
                 )
         );
 
         dataSets.add(
                 new DataSet(
-                        new int[]{},
-                        new int[]{1, 2, 1, 2},
-                        new Assist(new int[]{1, 1, 2, 2}, 2)
+                        "",
+                        -1,
+                        assist.copy(new int[]{-1, 0, 3, 5, 9, 12}, 13)
+                )
+        );
+
+        dataSets.add(
+                new DataSet(
+                        "",
+                        4,
+                        assist.copy(new int[]{-1, 0, 3, 5, 9, 12}, 9)
+                )
+        );
+
+        dataSets.add(
+                new DataSet(
+                        "",
+                        -1,
+                        assist.copy(new int[]{-1, 0, 3, 5, 9, 12}, 2)
                 )
         );
 
@@ -51,12 +58,12 @@ class SolutionTest extends DataSetControl {
     @NotNull
     @Override
     public ArrayList<Function1<DataSet, Object>> buildImpl() {
-        ArrayList<Function1<DataSet, Object>> impls = new ArrayList<>();
 
+        ArrayList<Function1<DataSet, Object>> impls = new ArrayList<>();
         impls.add(
                 dataSet -> {
                     Assist assist = (Assist) dataSet.getAssist();
-                    assertArrayEquals(solution.shuffle(assist.getNums(), assist.getN()), (int[]) dataSet.getTarget());
+                    Assert.assertEquals(solution.searchMid(assist.getNums(), assist.getTarget()), dataSet.getTarget());
                     return true;
                 }
         );
