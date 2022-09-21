@@ -1,17 +1,16 @@
-package easy._ms_01_05;
+package easy._0278;
 
 import common.DataSet;
 import common.DataSetControl;
 import kotlin.jvm.functions.Function1;
 import org.jetbrains.annotations.NotNull;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@Test(groups = {"tags.two-pointers", "tags.string", "difficult-easy"})
+@Test(groups = {"tags.binarySearch", "difficulty.easy"})
 class SolutionTest extends DataSetControl {
 
     Solution solution = new Solution();
@@ -20,22 +19,20 @@ class SolutionTest extends DataSetControl {
     @Override
     public ArrayList<DataSet> buildDataSet() {
         ArrayList<DataSet> dataSets = new ArrayList<>();
-        Assist assist = new Assist("","");
+
         dataSets.add(
                 new DataSet(
-                        assist.copy("pale", "ple"),
-                        true
+                        new Assist(5, 4),
+                        4
                 )
         );
 
         dataSets.add(
                 new DataSet(
-                        assist.copy("pales","pal"),
-                        false
+                        new Assist(1, 1),
+                        1
                 )
         );
-
-
         return dataSets;
     }
 
@@ -43,16 +40,11 @@ class SolutionTest extends DataSetControl {
     @Override
     public ArrayList<Function1<DataSet, Object>> buildImpl() {
         ArrayList<Function1<DataSet, Object>> impls = new ArrayList<>();
-
         impls.add(
                 dataSet -> {
-
-                    if ((Boolean) dataSet.getTarget()) {
-                        assertTrue(solution.oneEditAway(((Assist) dataSet.getSample()).getSample(), ((Assist) dataSet.getSample()).getEditString()));
-                    } else {
-                        assertFalse(solution.oneEditAway(((Assist) dataSet.getSample()).getSample(), ((Assist) dataSet.getSample()).getEditString()));
-                    }
-
+                    Assist assist = (Assist) dataSet.getSample();
+                    solution.setBad(assist.getBad());
+                    Assert.assertEquals(solution.firstBadVersion(assist.getN()), dataSet.getTarget());
                     return true;
                 }
         );

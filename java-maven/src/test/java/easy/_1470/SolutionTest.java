@@ -21,26 +21,23 @@ class SolutionTest extends DataSetControl {
 
         dataSets.add(
                 new DataSet(
-                        new int[]{},
-                        new int[]{2, 3, 5, 4, 1, 7},
-                        new Assist(new int[]{2, 5, 1, 3, 4, 7}, 3)
+                        new Assist(new int[]{2, 5, 1, 3, 4, 7}, 3),
+                        new int[]{2, 3, 5, 4, 1, 7}
                 )
         );
 
 
         dataSets.add(
                 new DataSet(
-                        new int[]{},
-                        new int[]{1, 4, 2, 3, 3, 2, 4, 1},
-                        new Assist(new int[]{1, 2, 3, 4, 4, 3, 2, 1}, 4)
+                        new Assist(new int[]{1, 2, 3, 4, 4, 3, 2, 1}, 4),
+                        new int[]{1, 4, 2, 3, 3, 2, 4, 1}
                 )
         );
 
         dataSets.add(
                 new DataSet(
-                        new int[]{},
-                        new int[]{1, 2, 1, 2},
-                        new Assist(new int[]{1, 1, 2, 2}, 2)
+                        new Assist(new int[]{1, 1, 2, 2}, 2),
+                        new int[]{1, 2, 1, 2}
                 )
         );
 
@@ -55,7 +52,7 @@ class SolutionTest extends DataSetControl {
 
         impls.add(
                 dataSet -> {
-                    Assist assist = (Assist) dataSet.getAssist();
+                    Assist assist = (Assist) dataSet.getSample();
                     assertArrayEquals(solution.shuffle(assist.getNums(), assist.getN()), (int[]) dataSet.getTarget());
                     return true;
                 }

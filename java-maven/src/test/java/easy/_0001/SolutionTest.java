@@ -21,9 +21,8 @@ class SolutionTest extends DataSetControl {
 
         dataSets.add(
                 new DataSet(
-                        new int[]{2, 7, 11, 14},
-                        new int[]{0, 1},
-                        new Assist(9)
+                        new Assist( new int[]{2, 7, 11, 14},9),
+                        new int[]{0, 1}
                 )
         );
 
@@ -38,16 +37,16 @@ class SolutionTest extends DataSetControl {
 
         impls.add(
                 dataSet -> {
-                    Assist assist = (Assist) dataSet.getAssist();
-                    assertArrayEquals(solution.twoSum((int[]) dataSet.getSample(), assist.getTarget()), (int[]) dataSet.getTarget());
+                    Assist assist = (Assist) dataSet.getSample();
+                    assertArrayEquals(solution.twoSum(assist.getSample(), assist.getTarget()), (int[]) dataSet.getTarget());
                     return true;
                 }
         );
 
         impls.add(
                 dataSet -> {
-                    Assist assist = (Assist) dataSet.getAssist();
-                    assertArrayEquals(solution.twoSum2((int[]) dataSet.getSample(), assist.getTarget()), (int[]) dataSet.getTarget());
+                    Assist assist = (Assist) dataSet.getSample();
+                    assertArrayEquals(solution.twoSum2(assist.getSample(), assist.getTarget()), (int[]) dataSet.getTarget());
                     return true;
                 }
         );

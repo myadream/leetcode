@@ -22,23 +22,22 @@ class SolutionTest extends DataSetControl {
 
         dataSets.add(
                 new DataSet(
-                        new int[]{},
-                        true,
                         assist.copy(
                                 new int[]{1, 2, 3, 4, 5},
                                 new int[]{4, 5, 3, 2, 1}
-                        )
+                        ),
+                        true
+
                 )
         );
 
         dataSets.add(
                 new DataSet(
-                        new int[]{},
-                        false,
                         assist.copy(
                                 new int[]{1, 2, 3, 4, 5},
                                 new int[]{4, 3, 5, 1, 2}
-                        )
+                        ),
+                        false
                 )
         );
 
@@ -52,7 +51,7 @@ class SolutionTest extends DataSetControl {
         ArrayList<Function1<DataSet, Object>> impls = new ArrayList<>();
         impls.add(
                 dataSet -> {
-                    Assist assist = (Assist) dataSet.getAssist();
+                    Assist assist = (Assist) dataSet.getSample();
                     Assert.assertEquals(solution.validateStackSequencesDeque(assist.getPushed(), assist.getPoped()), dataSet.getTarget());
                     return true;
                 }
@@ -60,7 +59,7 @@ class SolutionTest extends DataSetControl {
 
         impls.add(
                 dataSet -> {
-                    Assist assist = (Assist) dataSet.getAssist();
+                    Assist assist = (Assist) dataSet.getSample();
                     Assert.assertEquals(solution.validateStackSequences(assist.getPushed(), assist.getPoped()), dataSet.getTarget());
                     return true;
                 }

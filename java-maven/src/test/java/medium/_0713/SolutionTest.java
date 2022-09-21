@@ -19,21 +19,19 @@ class SolutionTest extends DataSetControl {
     @Override
     public ArrayList<DataSet> buildDataSet() {
         ArrayList<DataSet> dataSet = new ArrayList<>();
-        Assist assist = new Assist(0);
+        Assist assist = new Assist(new int[]{}, 0);
 
         dataSet.add(
                 new DataSet(
-                        new int[]{10, 5, 2, 6},
-                        8,
-                        assist.copy(100)
+                        assist.copy(new int[]{10, 5, 2, 6}, 100),
+                        8
                 )
         );
 
         dataSet.add(
                 new DataSet(
-                        new int[]{1, 2, 3},
-                        0,
-                        assist.copy(0)
+                        assist.copy(new int[]{1, 2, 3}, 100),
+                        0
                 )
         );
 
@@ -46,8 +44,8 @@ class SolutionTest extends DataSetControl {
         ArrayList<Function1<DataSet, Object>> impls = new ArrayList<>();
         impls.add(
                 dataSet -> {
-                    Assist assist = (Assist) dataSet.getAssist();
-                    assertEquals(dataSet.getTarget(), solution.numSubarrayProductLessThanK((int[]) dataSet.getSample(), assist.getK()));
+                    Assist assist = (Assist) dataSet.getSample();
+                    assertEquals(dataSet.getTarget(), solution.numSubarrayProductLessThanK(assist.getSample(), assist.getK()));
 
                     return true;
                 }

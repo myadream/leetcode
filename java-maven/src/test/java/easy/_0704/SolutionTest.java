@@ -21,33 +21,29 @@ class SolutionTest extends DataSetControl {
 
         dataSets.add(
                 new DataSet(
-                        "",
-                        0,
-                        assist.copy(new int[]{-1, 0, 5}, -1)
+                        assist.copy(new int[]{-1, 0, 5}, -1),
+                        0
                 )
         );
 
         dataSets.add(
                 new DataSet(
-                        "",
-                        -1,
-                        assist.copy(new int[]{-1, 0, 3, 5, 9, 12}, 13)
+                        assist.copy(new int[]{-1, 0, 3, 5, 9, 12}, 13),
+                        -1
                 )
         );
 
         dataSets.add(
                 new DataSet(
-                        "",
-                        4,
-                        assist.copy(new int[]{-1, 0, 3, 5, 9, 12}, 9)
+                        assist.copy(new int[]{-1, 0, 3, 5, 9, 12}, 9),
+                        4
                 )
         );
 
         dataSets.add(
                 new DataSet(
-                        "",
-                        -1,
-                        assist.copy(new int[]{-1, 0, 3, 5, 9, 12}, 2)
+                        assist.copy(new int[]{-1, 0, 3, 5, 9, 12}, 2),
+                        -1
                 )
         );
 
@@ -62,7 +58,7 @@ class SolutionTest extends DataSetControl {
         ArrayList<Function1<DataSet, Object>> impls = new ArrayList<>();
         impls.add(
                 dataSet -> {
-                    Assist assist = (Assist) dataSet.getAssist();
+                    Assist assist = (Assist) dataSet.getSample();
                     Assert.assertEquals(solution.searchMid(assist.getNums(), assist.getTarget()), dataSet.getTarget());
                     return true;
                 }

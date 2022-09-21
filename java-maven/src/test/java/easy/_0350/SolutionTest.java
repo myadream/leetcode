@@ -11,33 +11,31 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 
-@Test(groups = {"tags.array", "tags.hashTable", "tags.twoPointers", "tags.binarySearch", "tags.sorting", "difficulty.easy" })
+@Test(groups = {"tags.array", "tags.hashTable", "tags.twoPointers", "tags.binarySearch", "tags.sorting", "difficulty.easy"})
 class SolutionTest extends DataSetControl {
 
     Solution solution = new Solution();
-
-
 
 
     @NotNull
     @Override
     public ArrayList<DataSet> buildDataSet() {
         ArrayList<DataSet> dataSets = new ArrayList<DataSet>();
-        Assist assist = new Assist(new int[]{});
+        Assist assist = new Assist(new int[]{}, new int[]{});
         dataSets.add(
                 new DataSet(
-                        new int[]{1, 2, 2, 1},
-                        new int[]{2, 2,},
-                        assist.copy(new int[]{2, 2})
+                        assist.copy(new int[]{1, 2, 2, 1}, new int[]{2, 2})
+                        ,
+                        new int[]{2, 2,}
                 )
         );
 
         dataSets.add(
                 new DataSet(
-                        new int[]{4, 9, 5},
-                        new int[]{9 ,4},
-                        assist.copy(new int[]{9, 4, 9, 8, 4})
-                )
+                        assist.copy(new int[]{4, 9, 5}, new int[]{9, 4, 9, 8, 4}),
+                        new int[]{9, 4}
+
+                        )
         );
 
         return dataSets;
@@ -53,8 +51,8 @@ class SolutionTest extends DataSetControl {
                     assertArrayEquals(
                             (int[]) dataSet.getTarget(),
                             solution.intersect(
-                                    (int[]) dataSet.getSample(),
-                                    ((Assist)dataSet.getAssist()).getNumber()
+                                    ((Assist) dataSet.getSample()).getSample(),
+                                    ((Assist) dataSet.getSample()).getNumber()
                             ));
 
                     return true;
@@ -66,8 +64,8 @@ class SolutionTest extends DataSetControl {
                     assertArrayEquals(
                             (int[]) dataSet.getTarget(),
                             solution.intersect2(
-                                    (int[]) dataSet.getSample(),
-                                    ((Assist)dataSet.getAssist()).getNumber()
+                                    ((Assist) dataSet.getSample()).getSample(),
+                                    ((Assist) dataSet.getSample()).getNumber()
                             ));
 
                     return true;

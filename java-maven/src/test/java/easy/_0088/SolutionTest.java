@@ -20,22 +20,19 @@ class SolutionTest extends DataSetControl {
     @Override
     public ArrayList<DataSet> buildDataSet() {
         ArrayList<DataSet> dataSets = new ArrayList<DataSet>();
-        Assist assist = new Assist(0, 0, new int[]{});
+        Assist assist = new Assist(new int[]{}, 0, 0, new int[]{});
 
         dataSets.add(
                 new DataSet(
-                        new int[]{1, 2, 3, 0, 0, 0},
-                        new int[]{1, 2, 2, 3, 5, 6},
-                        assist.copy(3, 2, new int[]{2, 5, 6})
+                        assist.copy(new int[]{1, 2, 3, 0, 0, 0}, 3, 2, new int[]{2, 5, 6}),
+                        new int[]{1, 2, 2, 3, 5, 6}
                 )
         );
 
-
         dataSets.add(
                 new DataSet(
-                        new int[]{1, 2, 3, 0, 0, 0},
-                        new int[]{1, 2, 2, 3, 5, 6},
-                        assist.copy(3, 2, new int[]{2, 5, 6})
+                        assist.copy(new int[]{1, 2, 3, 0, 0, 0}, 3, 2, new int[]{2, 5, 6}),
+                        new int[]{1, 2, 2, 3, 5, 6}
                 )
         );
 
@@ -49,10 +46,9 @@ class SolutionTest extends DataSetControl {
 
         impls.add(
                 dataSet -> {
-                    Assist assist = (Assist) dataSet.getAssist();
-                    int[] nums = (int[]) dataSet.getSample();
-                    solution.merge((int[]) nums, assist.getM(), assist.getNums(), assist.getN());
-                    assertArrayEquals((int[]) dataSet.getTarget(), nums);
+                    Assist assist = (Assist) dataSet.getSample();
+                    solution.merge((int[]) assist.getSample(), assist.getM(), assist.getNums(), assist.getN());
+                    assertArrayEquals((int[]) dataSet.getTarget(), assist.getNums());
 
                     return true;
                 }

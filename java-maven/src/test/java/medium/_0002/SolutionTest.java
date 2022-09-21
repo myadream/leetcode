@@ -18,15 +18,15 @@ class SolutionTest extends DataSetControl {
         Assist assist = new Assist(new int[]{}, new int[]{});
 
         dataSets.add(
-                new DataSet(new int[]{}, new int[]{7, 0, 8}, assist.copy(new int[]{2, 4, 3}, new int[]{5, 6, 4}))
+                new DataSet(assist.copy(new int[]{2, 4, 3}, new int[]{5, 6, 4}), new int[]{7, 0, 8})
         );
 
         dataSets.add(
-                new DataSet(new int[]{}, new int[]{0}, assist.copy(new int[]{0}, new int[]{0}))
+                new DataSet(assist.copy(new int[]{0}, new int[]{0}), new int[]{0})
         );
 
         dataSets.add(
-                new DataSet(new int[]{}, new int[]{0}, assist.copy(new int[]{9, 9, 9, 9, 9, 9, 9}, new int[]{9, 9, 9, 9}))
+                new DataSet(assist.copy(new int[]{9, 9, 9, 9, 9, 9, 9}, new int[]{9, 9, 9, 9}), new int[]{0})
         );
 
         return dataSets;
@@ -40,7 +40,7 @@ class SolutionTest extends DataSetControl {
         funs.add(
                 item -> {
 
-                    Assist assist = (Assist) item.getAssist();
+                    Assist assist = (Assist) item.getSample();
 
                     Solution.ListNode temp;
 
