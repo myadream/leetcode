@@ -1,4 +1,4 @@
-package easy._0344;
+package easy._0283;
 
 import common.DataSet;
 import common.DataSetControl;
@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
-@Test(groups = {"tags.binarySearch", "tags.string", "tags.recursion", "difficulty.easy"})
+@Test(groups = {"tags.twoPointers", "tags.array", "difficulty.easy"})
 class SolutionTest extends DataSetControl {
 
     Solution solution = new Solution();
@@ -21,15 +21,22 @@ class SolutionTest extends DataSetControl {
 
         dataSets.add(
                 new DataSet(
-                        new char[]{'h', 'e', 'l', 'l', 'o'},
-                        new char[]{'o', 'l', 'l', 'e', 'h'}
+                        new int[]{0, 1, 0, 3, 12},
+                        new int[]{1, 3, 12, 0, 0}
                 )
         );
 
         dataSets.add(
                 new DataSet(
-                        new char[]{'H', 'a', 'n', 'n', 'a', 'h'},
-                        new char[]{'h', 'a', 'n', 'n', 'a', 'H'}
+                        new int[]{0},
+                        new int[]{0}
+                )
+        );
+
+        dataSets.add(
+                new DataSet(
+                        new int[]{1, 2},
+                        new int[]{1, 2}
                 )
         );
 
@@ -40,10 +47,20 @@ class SolutionTest extends DataSetControl {
     @Override
     public ArrayList<Function1<DataSet, Object>> buildImpl() {
         ArrayList<Function1<DataSet, Object>> impls = new ArrayList<>();
+
         impls.add(
                 dataSet -> {
-                    solution.reverseString((char[]) dataSet.getSample());
-                    Assert.assertEquals((char[]) dataSet.getSample(), dataSet.getTarget());
+                    solution.moveZeroesArray((int[]) dataSet.getSample());
+                    Assert.assertEquals(dataSet.getSample(), dataSet.getTarget());
+                    return true;
+                }
+        );
+
+
+        impls.add(
+                dataSet -> {
+                    solution.moveZeroesTwoPointers((int[]) dataSet.getSample());
+                    Assert.assertEquals((int[]) dataSet.getSample(), dataSet.getTarget());
                     return true;
                 }
         );

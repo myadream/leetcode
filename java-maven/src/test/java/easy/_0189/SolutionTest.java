@@ -1,4 +1,4 @@
-package easy._0344;
+package easy._0189;
 
 import common.DataSet;
 import common.DataSetControl;
@@ -8,8 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
-
-@Test(groups = {"tags.binarySearch", "tags.string", "tags.recursion", "difficulty.easy"})
+@Test(groups = {"tags.twoPointers", "tags.array", "difficulty.easy"})
 class SolutionTest extends DataSetControl {
 
     Solution solution = new Solution();
@@ -17,36 +16,38 @@ class SolutionTest extends DataSetControl {
     @NotNull
     @Override
     public ArrayList<DataSet> buildDataSet() {
+
         ArrayList<DataSet> dataSets = new ArrayList<>();
-
         dataSets.add(
                 new DataSet(
-                        new char[]{'h', 'e', 'l', 'l', 'o'},
-                        new char[]{'o', 'l', 'l', 'e', 'h'}
+                        new Assist(new int[]{1,2,3,4,5,6,7}, 3),
+                        new int[]{5,6,7,1,2,3,4}
                 )
         );
 
         dataSets.add(
                 new DataSet(
-                        new char[]{'H', 'a', 'n', 'n', 'a', 'h'},
-                        new char[]{'h', 'a', 'n', 'n', 'a', 'H'}
+                        new Assist(new int[]{-1,-100,3,99}, 2),
+                        new int[]{3,99,-1,-100}
                 )
         );
-
         return dataSets;
     }
 
     @NotNull
     @Override
     public ArrayList<Function1<DataSet, Object>> buildImpl() {
-        ArrayList<Function1<DataSet, Object>> impls = new ArrayList<>();
+                ArrayList<Function1<DataSet, Object>> impls = new ArrayList<>();
         impls.add(
                 dataSet -> {
-                    solution.reverseString((char[]) dataSet.getSample());
-                    Assert.assertEquals((char[]) dataSet.getSample(), dataSet.getTarget());
+                    Assist assist = (Assist) dataSet.getSample();
+                    solution.rotateArraySplice(assist.getNums(), assist.getK());
+                    Assert.assertEquals(assist.getNums(), dataSet.getTarget());
                     return true;
                 }
         );
+
+
 
         return impls;
     }
