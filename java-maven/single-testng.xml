@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="single">
-    <test name="_0905">
-        <classes>
-            <class name="easy._0905.SolutionTest"/>
-        </classes>
+<suite name="difficulty" parallel="tests" thread-count="5">
+    <test name="easy">
+        <packages>
+            <package name="com.myadream.code.leetcode.easy.*" />
+        </packages>
     </test>
 </suite>
+
