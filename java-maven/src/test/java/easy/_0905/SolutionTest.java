@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@Test(groups = {"tags.array", "tags.two-pointers", "tags.Sorting", "difficulty.easy"})
+@Test(groups = {"tags.array", "tags.twoPointers", "tags.Sorting", "difficulty.easy"})
 class SolutionTest extends DataSetControl {
     Solution solution = new Solution();
 
