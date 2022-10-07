@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
-@Test(groups = {"tags.recursion", "tags.linked-list", "tags.math", "difficulty.medium"})
+@Test(groups = {"tags.recursion", "tags.linkedList", "tags.math", "difficulty.medium"})
 class SolutionTest extends DataSetControl {
 
     @NotNull
