@@ -1,0 +1,1 @@
+add_executable(_0704 solution.c solution.h main.c)
