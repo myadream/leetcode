@@ -8,3 +8,6 @@ add_subdirectory(_0704)
 
 #https://leetcode.cn/problems/first-bad-version/
 add_subdirectory(_0278)
+
+#https://leetcode.cn/problems/search-insert-position/?plan=algorithms&plan_progress=sfqjrrm
+add_subdirectory(_0035)
