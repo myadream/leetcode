@@ -5,9 +5,11 @@ import com.myadream.code.leetcode.common.DataSetControl;
 import kotlin.jvm.functions.Function1;
 import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Assertions;
+import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
+@Test(groups = {"tags.greedy", "tags.sorting", "tags.twoPointers", "tags.binarySearch", "difficulty.easy"})
 class SolutionTest extends DataSetControl {
 
     Solution solution = new Solution();
@@ -47,7 +49,7 @@ class SolutionTest extends DataSetControl {
         funs.add(
                 dataSet -> {
                     Assist assist = (Assist) dataSet.getSample();
-                    Assertions.assertEquals(dataSet.getTarget(), solution.advantageCount(assist.getNums1(), assist.getNums2()));
+                    Assertions.assertArrayEquals((int[]) dataSet.getTarget(), solution.advantageCount(assist.getNums1(), assist.getNums2()));
                     return true;
                 }
         );
