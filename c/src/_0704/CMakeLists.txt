@@ -1,0 +1,1 @@
+add_executable(_0704 solution.c solution.h main.c ../_0035/searchInsert.c ../_0035/searchInsert.h ../_0035/main.c)
