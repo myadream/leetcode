@@ -11,3 +11,6 @@ add_subdirectory(_0278)
 
 #https://leetcode.cn/problems/search-insert-position/?plan=algorithms&plan_progress=sfqjrrm
 add_subdirectory(_0035)
+
+#https://leetcode.cn/problems/squares-of-a-sorted-array/?plan=algorithms&plan_progress=sfqjrrm
+add_subdirectory(_0977)
