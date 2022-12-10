@@ -1,3 +1,6 @@
+
+add_subdirectory(tools)
+
 add_subdirectory(removeDuplicates)
 
 #https://leetcode-cn.com/leetbook/read/top-interview-questions-easy/x2zsx1/
@@ -14,3 +17,7 @@ add_subdirectory(_0035)
 
 #https://leetcode.cn/problems/squares-of-a-sorted-array/?plan=algorithms&plan_progress=sfqjrrm
 add_subdirectory(_0977)
+
+add_subdirectory(_0217)
+
+add_subdirectory(_0053)
