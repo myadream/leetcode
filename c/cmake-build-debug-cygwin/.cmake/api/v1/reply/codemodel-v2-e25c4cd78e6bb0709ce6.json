@@ -1,0 +1,317 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					],
+					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/library",
+					"jsonFile" : "directory-src.library-Debug-48b535c9bd8c2df2f1c7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/library",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "src/removeDuplicates",
+					"jsonFile" : "directory-src.removeDuplicates-Debug-1fd8358bed1a3f6957bd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/removeDuplicates",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "src/maxProfit",
+					"jsonFile" : "directory-src.maxProfit-Debug-d4c7157a7d8e4fc05ef1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/maxProfit",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "src/_0704",
+					"jsonFile" : "directory-src._0704-Debug-9832ab2b096214f00a28.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/_0704",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "src/_0278",
+					"jsonFile" : "directory-src._0278-Debug-24c5e98bd1ea6cf208f1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/_0278",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "src/_0035",
+					"jsonFile" : "directory-src._0035-Debug-7b395b08da315bf7bbc5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/_0035",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "src/_0977",
+					"jsonFile" : "directory-src._0977-Debug-f6c4a521940d0a5e30f1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/_0977",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "src/_0217",
+					"jsonFile" : "directory-src._0217-Debug-6fd8d5d3145738552281.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/_0217",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "src/_0053",
+					"jsonFile" : "directory-src._0053-Debug-bb28974e9f89baf7b58c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/_0053",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "src/_0088",
+					"jsonFile" : "directory-src._0088-Debug-ed1cfb89b51d9daccbf8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/_0088",
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					],
+					"name" : "c",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "ToolLibary::@07a51f879e5ec2b49499",
+					"jsonFile" : "target-ToolLibary-Debug-99bc802e1d9fda8307dc.json",
+					"name" : "ToolLibary",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "_0035::@0ed2d7a56e422bf83180",
+					"jsonFile" : "target-_0035-Debug-711424666ab845709e0b.json",
+					"name" : "_0035",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "_0053::@7edc5c0c6aec29adeaae",
+					"jsonFile" : "target-_0053-Debug-f8c4e4ea44c1efcff090.json",
+					"name" : "_0053",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "_0088::@b9e6fc3d635d50f97d5e",
+					"jsonFile" : "target-_0088-Debug-81ada536ac3839cf224e.json",
+					"name" : "_0088",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "_0217::@0d13b70fb5dfe9e810ed",
+					"jsonFile" : "target-_0217-Debug-195678ec9ac4b3a261db.json",
+					"name" : "_0217",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "_0704::@9cae47d3f5b8712add03",
+					"jsonFile" : "target-_0704-Debug-d2b7637346411f476456.json",
+					"name" : "_0704",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "_0977::@ad95ae450c658f68f02d",
+					"jsonFile" : "target-_0977-Debug-d59f4f66926d6995afa3.json",
+					"name" : "_0977",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "firstBadVersion::@730e2575a95f0563346e",
+					"jsonFile" : "target-firstBadVersion-Debug-f480bd086d4a8f8dc165.json",
+					"name" : "firstBadVersion",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "maxProfit::@aa65df72d2310b5ce5ac",
+					"jsonFile" : "target-maxProfit-Debug-a765c3050ec97d566ee7.json",
+					"name" : "maxProfit",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "removeDuplicates::@6aa3f93295b5663091b2",
+					"jsonFile" : "target-removeDuplicates-Debug-9646f16a8fe40525ae00.json",
+					"name" : "removeDuplicates",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin",
+		"source" : "/cygdrive/f/soft/github/leetcode/c"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

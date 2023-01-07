@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="c"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\library\;CMake Files\src\removeDuplicates\;CMake Files\src\maxProfit\;CMake Files\src\_0704\;CMake Files\src\_0278\;CMake Files\src\_0035\;CMake Files\src\_0977\;CMake Files\src\_0217\;CMake Files\src\_0053\;CMake Files\src\_0088\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ToolLibary">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/library/libToolLibary.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/library"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/library/Makefile&quot;  VERBOSE=1 ToolLibary"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/library/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/library/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/library/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ToolLibary/fast">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/library/libToolLibary.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/library"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/library/Makefile&quot;  VERBOSE=1 ToolLibary/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/library/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/library/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/library/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="removeDuplicates">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/removeDuplicates/removeDuplicates.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/removeDuplicates"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/removeDuplicates/Makefile&quot;  VERBOSE=1 removeDuplicates"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/removeDuplicates/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/removeDuplicates/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/removeDuplicates/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="removeDuplicates/fast">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/removeDuplicates/removeDuplicates.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/removeDuplicates"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/removeDuplicates/Makefile&quot;  VERBOSE=1 removeDuplicates/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/removeDuplicates/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/removeDuplicates/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/removeDuplicates/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="maxProfit">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/maxProfit/maxProfit.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/maxProfit"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/maxProfit/Makefile&quot;  VERBOSE=1 maxProfit"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/maxProfit/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/maxProfit/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/maxProfit/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="maxProfit/fast">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/maxProfit/maxProfit.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/maxProfit"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/maxProfit/Makefile&quot;  VERBOSE=1 maxProfit/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/maxProfit/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/maxProfit/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/maxProfit/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_0704">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0704/_0704.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0704"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0704/Makefile&quot;  VERBOSE=1 _0704"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0704/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0704/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0704/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_0704/fast">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0704/_0704.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0704"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0704/Makefile&quot;  VERBOSE=1 _0704/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0704/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0704/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0704/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="firstBadVersion">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0278/firstBadVersion.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0278"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0278/Makefile&quot;  VERBOSE=1 firstBadVersion"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0278/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0278/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0278/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="firstBadVersion/fast">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0278/firstBadVersion.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0278"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0278/Makefile&quot;  VERBOSE=1 firstBadVersion/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0278/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0278/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0278/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_0035">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0035/_0035.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0035"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0035/Makefile&quot;  VERBOSE=1 _0035"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0035/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0035/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0035/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_0035/fast">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0035/_0035.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0035"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0035/Makefile&quot;  VERBOSE=1 _0035/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0035/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0035/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0035/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_0977">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0977/_0977.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0977"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0977/Makefile&quot;  VERBOSE=1 _0977"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0977/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0977/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0977/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_0977/fast">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0977/_0977.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0977"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0977/Makefile&quot;  VERBOSE=1 _0977/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0977/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0977/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0977/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_0217">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0217/_0217.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0217"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0217/Makefile&quot;  VERBOSE=1 _0217"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0217/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0217/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0217/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_0217/fast">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0217/_0217.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0217"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0217/Makefile&quot;  VERBOSE=1 _0217/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0217/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0217/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0217/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_0053">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0053/_0053.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0053"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0053/Makefile&quot;  VERBOSE=1 _0053"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0053/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0053/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0053/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_0053/fast">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0053/_0053.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0053"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0053/Makefile&quot;  VERBOSE=1 _0053/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0053/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0053/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0053/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_0088">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0088/_0088.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0088"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0088/Makefile&quot;  VERBOSE=1 _0088"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0088/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0088/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0088/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_0088/fast">
+				<Option output="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0088/_0088.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0088"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0088/Makefile&quot;  VERBOSE=1 _0088/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0088/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0088/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin/src/_0088/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0035/main.c">
+			<Option target="_0704"/>
+			<Option target="_0035"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0035/searchInsert.c">
+			<Option target="_0704"/>
+			<Option target="_0035"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0035/searchInsert.h">
+			<Option target="_0704"/>
+			<Option target="_0035"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0053/main.c">
+			<Option target="_0053"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0053/maxSubArray.c">
+			<Option target="_0053"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0053/maxSubArray.h">
+			<Option target="_0053"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0088/main.c">
+			<Option target="_0088"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0088/merge.c">
+			<Option target="_0088"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0088/merge.h">
+			<Option target="_0088"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0217/containsDuplicate.c">
+			<Option target="_0217"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0217/containsDuplicate.h">
+			<Option target="_0217"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0217/main.c">
+			<Option target="_0217"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0278/firstBadVersion.c">
+			<Option target="firstBadVersion"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0278/firstBadVersion.h">
+			<Option target="firstBadVersion"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0704/main.c">
+			<Option target="_0704"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0704/solution.c">
+			<Option target="_0704"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0704/solution.h">
+			<Option target="_0704"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0977/main.c">
+			<Option target="_0977"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0977/sortedSquares.c">
+			<Option target="_0977"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0977/sortedSquares.h">
+			<Option target="_0977"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/library/tools.c">
+			<Option target="ToolLibary"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/library/tools.h">
+			<Option target="ToolLibary"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/maxProfit/main.c">
+			<Option target="maxProfit"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/maxProfit/maxProfit.c">
+			<Option target="maxProfit"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/maxProfit/maxProfit.h">
+			<Option target="maxProfit"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/removeDuplicates/main.c">
+			<Option target="removeDuplicates"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/removeDuplicates/removeDuplicates.c">
+			<Option target="removeDuplicates"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/removeDuplicates/removeDuplicates.h">
+			<Option target="removeDuplicates"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/library/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\library\"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/removeDuplicates/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\removeDuplicates\"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/maxProfit/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\maxProfit\"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0704/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\_0704\"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0278/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\_0278\"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0035/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\_0035\"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0977/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\_0977\"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0217/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\_0217\"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0053/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\_0053\"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/soft/github/leetcode/c/src/_0088/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\_0088\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

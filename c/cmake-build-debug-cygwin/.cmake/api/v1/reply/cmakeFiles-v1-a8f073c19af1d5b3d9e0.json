@@ -1,0 +1,159 @@
+{
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug-cygwin/CMakeFiles/3.24.2/CMakeSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/cygdrive/c/Users/Administrator/AppData/Local/JetBrains/CLion2022.3/cygwin_cmake/share/cmake-3.24.2/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug-cygwin/CMakeFiles/3.24.2/CMakeCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/cygdrive/c/Users/Administrator/AppData/Local/JetBrains/CLion2022.3/cygwin_cmake/share/cmake-3.24.2/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/cygdrive/c/Users/Administrator/AppData/Local/JetBrains/CLion2022.3/cygwin_cmake/share/cmake-3.24.2/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/cygdrive/c/Users/Administrator/AppData/Local/JetBrains/CLion2022.3/cygwin_cmake/share/cmake-3.24.2/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/cygdrive/c/Users/Administrator/AppData/Local/JetBrains/CLion2022.3/cygwin_cmake/share/cmake-3.24.2/Modules/Platform/CYGWIN.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/cygdrive/c/Users/Administrator/AppData/Local/JetBrains/CLion2022.3/cygwin_cmake/share/cmake-3.24.2/Modules/Platform/UnixPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/cygdrive/c/Users/Administrator/AppData/Local/JetBrains/CLion2022.3/cygwin_cmake/share/cmake-3.24.2/Modules/CMakeFindCodeBlocks.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/cygdrive/c/Users/Administrator/AppData/Local/JetBrains/CLion2022.3/cygwin_cmake/share/cmake-3.24.2/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/cygdrive/c/Users/Administrator/AppData/Local/JetBrains/CLion2022.3/cygwin_cmake/share/cmake-3.24.2/Modules/ProcessorCount.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/cygdrive/c/Users/Administrator/AppData/Local/JetBrains/CLion2022.3/cygwin_cmake/share/cmake-3.24.2/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/cygdrive/c/Users/Administrator/AppData/Local/JetBrains/CLion2022.3/cygwin_cmake/share/cmake-3.24.2/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/cygdrive/c/Users/Administrator/AppData/Local/JetBrains/CLion2022.3/cygwin_cmake/share/cmake-3.24.2/Modules/Compiler/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/cygdrive/c/Users/Administrator/AppData/Local/JetBrains/CLion2022.3/cygwin_cmake/share/cmake-3.24.2/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/cygdrive/c/Users/Administrator/AppData/Local/JetBrains/CLion2022.3/cygwin_cmake/share/cmake-3.24.2/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/cygdrive/c/Users/Administrator/AppData/Local/JetBrains/CLion2022.3/cygwin_cmake/share/cmake-3.24.2/Modules/Platform/CYGWIN-GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/cygdrive/c/Users/Administrator/AppData/Local/JetBrains/CLion2022.3/cygwin_cmake/share/cmake-3.24.2/Modules/Platform/CYGWIN-GNU.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug-cygwin/CMakeFiles/3.24.2/CMakeRCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/cygdrive/c/Users/Administrator/AppData/Local/JetBrains/CLion2022.3/cygwin_cmake/share/cmake-3.24.2/Modules/CMakeRCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/cygdrive/c/Users/Administrator/AppData/Local/JetBrains/CLion2022.3/cygwin_cmake/share/cmake-3.24.2/Modules/Platform/CYGWIN-windres.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/cygdrive/c/Users/Administrator/AppData/Local/JetBrains/CLion2022.3/cygwin_cmake/share/cmake-3.24.2/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"path" : "src/CMakeLists.txt"
+		},
+		{
+			"path" : "src/library/CMakeLists.txt"
+		},
+		{
+			"path" : "src/removeDuplicates/CMakeLists.txt"
+		},
+		{
+			"path" : "src/maxProfit/CMakeLists.txt"
+		},
+		{
+			"path" : "src/_0704/CMakeLists.txt"
+		},
+		{
+			"path" : "src/_0278/CMakeLists.txt"
+		},
+		{
+			"path" : "src/_0035/CMakeLists.txt"
+		},
+		{
+			"path" : "src/_0977/CMakeLists.txt"
+		},
+		{
+			"path" : "src/_0217/CMakeLists.txt"
+		},
+		{
+			"path" : "src/_0053/CMakeLists.txt"
+		},
+		{
+			"path" : "src/_0088/CMakeLists.txt"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "/cygdrive/f/soft/github/leetcode/c/cmake-build-debug-cygwin",
+		"source" : "/cygdrive/f/soft/github/leetcode/c"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

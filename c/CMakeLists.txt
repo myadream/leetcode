@@ -5,5 +5,3 @@ set(CMAKE_C_STANDARD 99)
 
 add_subdirectory(src)
 
-link_directories (${PROJECT_SOURCE_DIR}/src/tools)
-

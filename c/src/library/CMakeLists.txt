@@ -1,0 +1,1 @@
+add_library(ToolLibary tools.c tools.h)

@@ -4,11 +4,6 @@
 
 #include "maxSubArray.h"
 
-int max(int a, int b) {
-    if (a > b) return a;
-    else return b;
-}
-
 int maxSubArray(int* nums, int numsSize) {
     int pre = 0;
     int maxAns = nums[0];
