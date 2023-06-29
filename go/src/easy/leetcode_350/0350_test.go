@@ -1,4 +1,4 @@
-package easy
+package leetcode_350
 
 import (
 	"fmt"

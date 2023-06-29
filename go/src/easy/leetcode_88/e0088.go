@@ -1,4 +1,4 @@
-package _088
+package leetcode_88
 
 import "sort"
 
