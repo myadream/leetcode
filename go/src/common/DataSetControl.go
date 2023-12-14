@@ -31,8 +31,10 @@ type DataSetTarget struct {
 	Value interface{}
 }
 
+type FunDataSet[P DataSetParamInterface, T DataSetInterface] func(p P, t T) bool
+
 type FunDataSet[P DataSetParamInterface, T DataSetInterface] struct {
-	HandlerDataSet[P, T]
+	Fun FunDataSetCall[P, T]
 }
 
 type DataSetControl[P DataSetParamInterface, T DataSetInterface] struct {
@@ -50,7 +52,9 @@ func (c DataSetControl[P, T]) Run(dataSet []DataSet[P, T], funDataSet []FunDataS
 			copier.Copy(&dataSetCopy.Param, &dataSet[j].Param)
 			copier.Copy(&dataSetCopy.Target, &dataSet[j].Target)
 
-			funDataSet[i].HandlerDataSet(dataSetCopy.Param, dataSetCopy.Target)
+			if funDataSet[i].Fun(dataSetCopy.Param, dataSetCopy.Target) {
+				break
+			}
 		}
 	}
 

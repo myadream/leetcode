@@ -1,10 +1,11 @@
-package _0001
+package leetcode_1
 
 import (
 	"fmt"
-	"github.com/stretchr/testify/assert"
 	"leetcode/src/common"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func dataSet() []common.DataSet[common.DataSetParamAssist, common.DataSetTarget] {

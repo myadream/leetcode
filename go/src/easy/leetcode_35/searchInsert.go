@@ -1,4 +1,4 @@
-package leetcode704
+package leetcode_35
 
 // 默认搜索
 func defaultSearch(nums []int, target int) int {

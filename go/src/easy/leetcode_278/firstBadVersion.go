@@ -1,4 +1,4 @@
-package leetcode278
+package leetcode_278
 
 /**
  * Forward declaration of isBadVersion API.
