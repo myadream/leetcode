@@ -8,15 +8,15 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func dataSet() []common.DataSet[common.DataSetParamAssist, common.DataSetTarget] {
-	var dataSets []common.DataSet[common.DataSetParamAssist, common.DataSetTarget]
+func dataSet() []common.DataCarrier[common.DCDefault, common.TDefault] {
+	var dataSets []common.DataCarrier[common.DCDefault, common.TDefault]
 
-	dataSets = append(dataSets, common.DataSet[common.DataSetParamAssist, common.DataSetTarget]{
-		Param: common.DataSetParamAssist{
+	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
+		SourceData: common.DCDefault{
 			Value:  []int{2, 7, 11, 15},
 			Assist: 9,
 		},
-		Target: common.DataSetTarget{
+		TargetData: common.TDefault{
 			Value: []int{0, 1},
 		},
 	})
@@ -44,8 +44,8 @@ func dataSet() []common.DataSet[common.DataSetParamAssist, common.DataSetTarget]
 	return dataSets
 }
 
-func handle(t *testing.T) []common.FunDataSet[common.DataSetParamAssist, common.DataSetTarget] {
-	var handle []common.FunDataSet[common.DataSetParamAssist, common.DataSetTarget]
+func handle(t *testing.T) []common.Processor[common.DCDefault, common.TargetData] {
+	var handle []common.Processor[common.DCDefault, common.TargetData]
 
 	handle = append(handle, common.FunDataSet[common.DataSetParamAssist, common.DataSetTarget]{
 		HandlerDataSet: func(dataSet common.DataSetParamAssist, target common.DataSetTarget) bool {
