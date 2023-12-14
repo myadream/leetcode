@@ -1,13 +1,8 @@
 package leetcode_2
 
-/**
- * Definition for singly-linked list.
- */
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	pre := &ListNode{
-		Next: nil,
-		Val:  0,
-	}
+// CaseOne /**
+func CaseOne(l1 *ListNode, l2 *ListNode) *ListNode {
+	pre := &ListNode{}
 
 	cur := pre
 
@@ -24,11 +19,10 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 			l2 = l2.Next
 		}
 
-		carry /= 10
+		carry = sum / 10
 		sum %= 10
 		cur.Next = &ListNode{
-			Val:  sum,
-			Next: nil,
+			Val: sum,
 		}
 		cur = cur.Next
 	}

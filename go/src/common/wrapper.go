@@ -1,8 +1,9 @@
 package common
 
 import (
+	"fmt"
+
 	"github.com/jinzhu/copier"
-	"sync"
 )
 
 type DataCarrier[P SourceData, T TargetData] struct {
@@ -27,39 +28,50 @@ type TDefault struct {
 	Value interface{}
 }
 
-type Processor[P SourceData, T TargetData] func(P, T) bool
+type ProcessorMethod[P SourceData, T TargetData] func(P, T) bool
+
+type Processor[P SourceData, T TargetData] struct {
+	Fn ProcessorMethod[P, T]
+}
 
 type DataFlowProcessor[P SourceData, T TargetData] struct {
 }
 
-type DataSetControlInterface[P SourceData, T TargetData] interface {
+type DataFlowProcessorInterface[P SourceData, T TargetData] interface {
 	ProcessData(processors []Processor[P, T], dataCarriers []DataCarrier[P, T]) interface{}
 }
 
 func (c DataFlowProcessor[P, T]) ProcessData(processors []Processor[P, T], dataCarriers []DataCarrier[P, T]) interface{} {
-	var wg sync.WaitGroup
 
-	chs := make(chan DataCarrier[P, T], len(dataCarriers))
-	for _, carrier := range dataCarriers {
-		carrierCopy := DataCarrier[P, T]{}
-		if err := copier.Copy(&carrierCopy, &carrier); err == nil {
-			chs <- carrierCopy
-		}
+	channels := make(chan int)
+	carriers := make([]DataCarrier[P, T], len(processors))
+	for i := 0; i < len(dataCarriers); i++ {
+
+	}
+	if err := copier.Copy(&carriers, &dataCarriers); err != nil {
+		panic(err)
 	}
 
-	for _, processor := range processors {
-		go func(processor Processor[P, T]) {
-			for carrier := range chs {
-				if !processor(carrier.SourceData, carrier.TargetData) {
-					return
+	for index, processor := range processors {
+
+		go func(processor Processor[P, T], carriers []DataCarrier[P, T], index int) {
+			carrierCopy := DataCarrier[P, T]{}
+			for _, carrier := range carriers {
+				if err := copier.Copy(&carrierCopy, &carrier); err != nil {
+					panic(err)
+				}
+				if !processor.Fn(carrier.SourceData, carrier.TargetData) {
+					break
 				}
 			}
-			wg.Done()
-		}(processor)
+
+			channels <- index
+		}(processor, carriers, index)
 	}
 
-	wg.Wait()
-	close(chs)
+	for i := 0; i < len(processors); i++ {
+		fmt.Println(<-channels)
+	}
 
 	return nil
 }
