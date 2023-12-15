@@ -86,43 +86,42 @@ func dataSet() []common.DataCarrier[common.DCDefault, common.TDefault] {
 func handle(t *testing.T) []common.Processor[common.DCDefault, common.TDefault] {
 	var handle []common.Processor[common.DCDefault, common.TDefault]
 
-	//handle = append(handle, common.Processor[common.DCDefault, common.TDefault]{
-	//	Fn: func(dataSet common.DCDefault, target common.TDefault) bool {
-	//		res := outputListNode(CaseOne(dataSet.Value.(*ListNode), dataSet.Assist.(*ListNode)))
-	//		return assert.Equal(
-	//			t,
-	//			res,
-	//			target.Value.([]int),
-	//			fmt.Sprintf(
-	//				"case one: dataSet: %v, assist: %v, target: %v, res: %v",
-	//				outputListNode(dataSet.Value.(*ListNode)),
-	//				outputListNode(dataSet.Assist.(*ListNode)),
-	//				target,
-	//				res,
-	//			),
-	//		)
-	//	},
-	//})
+	handle = append(handle, common.Processor[common.DCDefault, common.TDefault]{
+		Fn: func(dataSet common.DCDefault, target common.TDefault) bool {
+			res := outputListNode(CaseOne(dataSet.Value.(*ListNode), dataSet.Assist.(*ListNode)))
+			return assert.Equal(
+				t,
+				res,
+				target.Value.([]int),
+				fmt.Sprintf(
+					"case one: dataSet: %v, assist: %v, target: %v, res: %v",
+					outputListNode(dataSet.Value.(*ListNode)),
+					outputListNode(dataSet.Assist.(*ListNode)),
+					target,
+					res,
+				),
+			)
+		},
+	})
 
-	//handle = append(handle, common.Processor[common.DCDefault, common.TDefault]{
-	//	Fn: func(dataSet common.DCDefault, target common.TDefault) bool {
-	//		res := outputListNode(CaseTwo(dataSet.Value.(*ListNode), dataSet.Assist.(*ListNode)))
-	//		return assert.Equal(
-	//			t,
-	//			res,
-	//			target.Value.([]int),
-	//			fmt.Sprintf(
-	//				"case two: dataSet: %v, assist: %v, target: %v, res: %v",
-	//				outputListNode(dataSet.Value.(*ListNode)),
-	//				outputListNode(dataSet.Assist.(*ListNode)),
-	//				target,
-	//				res,
-	//			),
-	//		)
-	//
-	//	},
-	//})
-	//
+	handle = append(handle, common.Processor[common.DCDefault, common.TDefault]{
+		Fn: func(dataSet common.DCDefault, target common.TDefault) bool {
+			res := outputListNode(CaseTwo(dataSet.Value.(*ListNode), dataSet.Assist.(*ListNode)))
+			return assert.Equal(
+				t,
+				res,
+				target.Value.([]int),
+				fmt.Sprintf(
+					"case two: dataSet: %v, assist: %v, target: %v, res: %v",
+					outputListNode(dataSet.Value.(*ListNode)),
+					outputListNode(dataSet.Assist.(*ListNode)),
+					target,
+					res,
+				),
+			)
+
+		},
+	})
 
 	handle = append(handle, common.Processor[common.DCDefault, common.TDefault]{
 		Fn: func(dataSet common.DCDefault, target common.TDefault) bool {
