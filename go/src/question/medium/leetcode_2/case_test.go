@@ -144,7 +144,7 @@ func handle(t *testing.T) []common.Processor[common.DCDefault, common.TDefault] 
 	return handle
 }
 
-func Test(Test *testing.T) {
+func TestLeetcode2(Test *testing.T) {
 	test := common.DataFlowProcessor[common.DCDefault, common.TDefault]{}
 	test.ProcessData(handle(Test), dataSet())
 }
