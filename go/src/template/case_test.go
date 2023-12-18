@@ -33,7 +33,7 @@ func handle(t *testing.T) []common.Processor[common.DCDefault, common.TDefault] 
 				res,
 				target.Value.(string),
 				fmt.Sprintf(
-					"case one: dataSet: %s, assist: %s, target: %s, res: %s",
+					"case one: dataSet: %v, assist: %v, target: %v, res: %v",
 					dataSet.Value.(string),
 					dataSet.Assist.(string),
 					target,
