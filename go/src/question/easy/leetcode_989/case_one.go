@@ -1,5 +1,7 @@
 package leetcode_989
 
+import "leetcode/src/common"
+
 func CaseOne(num []int, k int) []int {
 	sum := 0
 	var total = make([]int, 0)
@@ -11,10 +13,10 @@ func CaseOne(num []int, k int) []int {
 
 		sum += k % 10
 
-		total = append([]int{sum % 10}, total...)
+		total = append(total, sum%10)
 		sum /= 10
 		k /= 10
 	}
 
-	return total
+	return common.Reverse(total)
 }
