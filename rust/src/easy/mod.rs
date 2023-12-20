@@ -1,2 +1,2 @@
-mod _0001;
-mod _0271;
+pub mod leetcode_1;
+pub mod leetcode_2;
