@@ -12,14 +12,43 @@ fn make_node_list(mut list_node: Vec<i32>) -> Option<Box<ListNode>> {
     Some(Box::new(node))
 }
 
-fn data_set() -> Vec<DataCarrier<SourceData<Option<Box<ListNode>>, Option<Box<ListNode>>>, TargetData<Option<Box<ListNode>>>>> {
+fn output_node_list(nodes: Option<Box<ListNode>>) -> Vec<i32> {
+    let mut output = Vec::new();
+    let mut  nodes = nodes.as_ref();
+
+    while nodes.is_some() {
+        if let Some(node) = nodes {
+            nodes = node.next.as_ref();
+            output.push(node.val);
+        }
+
+    }
+
+    output
+}
+
+fn data_set() -> Vec<DataCarrier<SourceData<Option<Box<ListNode>>, Option<Box<ListNode>>>, TargetData<Vec<i32>>>> {
     vec![
         DataCarrier::new(
             SourceData::new(
-                make_node_list(vec![1,2]),
-                make_node_list(vec![1,2]),
+                make_node_list(vec![2,4,3]),
+                make_node_list(vec![5,6,4]),
             ),
-            TargetData::new(make_node_list(vec![1,2]),),
+            TargetData::new(vec![7,0,8]),
+        ),
+        DataCarrier::new(
+            SourceData::new(
+                make_node_list(vec![0]),
+                make_node_list(vec![0]),
+            ),
+            TargetData::new(vec![0]),
+        ),
+        DataCarrier::new(
+            SourceData::new(
+                make_node_list(vec![9,9,9,9,9,9,9]),
+                make_node_list(vec![9,9,9,9]),
+            ),
+            TargetData::new(vec![8,9,9,9,0,0,0,1]),
         ),
     ]
 }
@@ -27,10 +56,10 @@ fn data_set() -> Vec<DataCarrier<SourceData<Option<Box<ListNode>>, Option<Box<Li
 
 #[test]
 fn case_one_test()  {
-    // for data in data_set() {
-        // assert_eq!(
-        //     case_one(data.source_data().value().clone(), data.source_data().assist().clone()),
-        //     data.target_data().value().clone()
-        // )
-    // }
+    for data in data_set() {
+        assert_eq!(
+            output_node_list(case_one(data.source_data.value, data.source_data.assist)),
+            data.target_data.value
+        )
+    }
 }
