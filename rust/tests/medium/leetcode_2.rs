@@ -63,3 +63,13 @@ fn case_one_test()  {
         )
     }
 }
+
+#[test]
+fn case_two_test()  {
+    for data in data_set() {
+        assert_eq!(
+            output_node_list(CaseTwo::case(data.source_data.value, data.source_data.assist)),
+            data.target_data.value
+        )
+    }
+}
