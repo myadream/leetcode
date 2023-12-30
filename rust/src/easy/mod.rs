@@ -5,3 +5,4 @@ pub mod leetcode_2706;
 pub mod leetcode_1185;
 pub mod leetcode_1154;
 pub mod leetcode_2000;
+pub mod leetcode_13;

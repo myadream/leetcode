@@ -3,8 +3,7 @@ pub struct DayOfYear {}
 impl DayOfYear {
     pub fn case_oen(date: String) -> i32 {
         let month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30];
-        let mut date = date.split_terminator("-");
-        let year = date.next().unwrap().parse::<i32>();
+        let year = date[..4].parse::<i32>().unwrap();
         let month = date[5..7].parse::<i32>().unwrap();
         let day = date[8..].parse::<i32>().unwrap();
 
