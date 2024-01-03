@@ -13,12 +13,18 @@ fn data_set() -> Vec<DataCarrier<SourceData<Vec<String>, String>, TargetData<boo
     ]
 }
 
-#[test]
-fn case_one_test()  {
-    for data in data_set() {
-        assert_eq!(
-            case_one(data.source_data.value, data.source_data.assist),
-            data.target_data.value
-        )
+#[cfg(test)]
+mod test {
+    use rust::easy::leetcode_2828::case_one;
+    use crate::easy::leetcode_2828::data_set;
+
+    #[test]
+    fn case_one_test()  {
+        for data in data_set() {
+            assert_eq!(
+                case_one(data.source_data.value, data.source_data.assist),
+                data.target_data.value
+            )
+        }
     }
 }

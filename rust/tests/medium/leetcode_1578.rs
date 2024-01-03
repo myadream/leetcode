@@ -24,22 +24,28 @@ fn data_set() -> Vec<DataCarrier<SourceData<String, Vec<i32>>, TargetData<i32>>>
     ]
 }
 
-#[test]
-fn test_case_one() {
-    for data in data_set() {
-        assert_eq!(
-            MinConst::case_one(data.source_data.value, data.source_data.assist),
-            data.target_data.value
-        )
-    }
-}
+#[cfg(test)]
+mod test {
+    use rust::medium::leetcode_1578::MinConst;
+    use crate::medium::leetcode_1578::data_set;
 
-#[test]
-fn test_case_two() {
-    for data in data_set() {
-        assert_eq!(
-            MinConst::case_two(data.source_data.value, data.source_data.assist),
-            data.target_data.value
-        )
+    #[test]
+    fn test_case_one() {
+        for data in data_set() {
+            assert_eq!(
+                MinConst::case_one(data.source_data.value, data.source_data.assist),
+                data.target_data.value
+            )
+        }
+    }
+
+    #[test]
+    fn test_case_two() {
+        for data in data_set() {
+            assert_eq!(
+                MinConst::case_two(data.source_data.value, data.source_data.assist),
+                data.target_data.value
+            )
+        }
     }
 }

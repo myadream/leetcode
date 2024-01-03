@@ -53,23 +53,28 @@ fn data_set() -> Vec<DataCarrier<SourceData<Option<Box<ListNode>>, Option<Box<Li
     ]
 }
 
+#[cfg(test)]
+mod test {
+    use rust::medium::leetcode_2::{case_one, CaseTwo};
+    use crate::medium::leetcode_2::{data_set, output_node_list};
 
-#[test]
-fn case_one_test()  {
-    for data in data_set() {
-        assert_eq!(
-            output_node_list(case_one(data.source_data.value, data.source_data.assist)),
-            data.target_data.value
-        )
+    #[test]
+    fn case_one_test()  {
+        for data in data_set() {
+            assert_eq!(
+                output_node_list(case_one(data.source_data.value, data.source_data.assist)),
+                data.target_data.value
+            )
+        }
     }
-}
 
-#[test]
-fn case_two_test()  {
-    for data in data_set() {
-        assert_eq!(
-            output_node_list(CaseTwo::case(data.source_data.value, data.source_data.assist)),
-            data.target_data.value
-        )
+    #[test]
+    fn case_two_test()  {
+        for data in data_set() {
+            assert_eq!(
+                output_node_list(CaseTwo::case(data.source_data.value, data.source_data.assist)),
+                data.target_data.value
+            )
+        }
     }
 }
