@@ -1,6 +1,4 @@
 use crate::common::wrapper::{DataCarrier, SourceData, TargetData};
-use rust::easy::leetcode_2828::{case_one};
-
 fn data_set() -> Vec<DataCarrier<SourceData<Vec<String>, String>, TargetData<bool>>> {
     vec![
         DataCarrier::new(

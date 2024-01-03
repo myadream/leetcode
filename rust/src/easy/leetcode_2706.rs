@@ -26,7 +26,7 @@ impl ByChoco {
         let remainder: i32 = prices.into_iter().take(2).sum();
 
         // 返回结果
-        if remainder >= money { remainder - money } else { money }
+        if money >= remainder { money - remainder } else { money }
     }
 
     pub fn case_three(prices: Vec<i32>, money: i32) -> i32 {

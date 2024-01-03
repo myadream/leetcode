@@ -1,4 +1,3 @@
-use rust::medium::leetcode_53::*;
 use crate::common::wrapper::{DataCarrier, SourceData, TargetData};
 
 fn data_set() -> Vec<DataCarrier<SourceData<Vec<i32>, i32>, TargetData<i32>>> {

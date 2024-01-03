@@ -1,5 +1,3 @@
-use rust::medium::leetcode_1578::{MinConst};
-
 use crate::common::wrapper::{DataCarrier, SourceData, TargetData};
 
 fn data_set() -> Vec<DataCarrier<SourceData<String, Vec<i32>>, TargetData<i32>>> {
