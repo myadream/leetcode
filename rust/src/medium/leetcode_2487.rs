@@ -33,17 +33,30 @@ impl ListNode {
 //   }
 // }
 impl RemoveNodes {
+
     pub fn case_one(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        if let Some(mut cur) = head {
-            cur.next = RemoveNodes::case_one(cur.next);
-             if cur.val < cur.next.unwrap().val {
-                 return head.unwrap().next;
+        // If the list is empty, return None
+        if head.is_none() {
+            return None;
+        }
+
+        // Unwrap the head node since we know it's not None
+        let mut boxed_head = head.unwrap();
+
+        // If the next node exists, process it recursively
+        if let Some(next_node) = boxed_head.next {
+
+            let node = Self::case_one(Some(next_node));
+
+            // Check if the current node's value is less than the next node's value
+            if boxed_head.val < node.as_ref().unwrap().val {
+                return node;
             } else {
-                 return Some(Box::new(cur));
+                boxed_head.next = node;
             }
         }
 
-
-        None
+        // Return the current node
+        Some(boxed_head)
     }
 }

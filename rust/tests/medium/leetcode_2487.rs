@@ -24,14 +24,14 @@ fn output_linked(mut node: Option<Box<ListNode>>) -> Vec<i32> {
     nums
 }
 
-fn data_set() -> Vec<DataCarrier<SourceData<Option<Box<ListNode>>, i32>, TargetData<Vec<i32>>>> {
+fn data_set() -> Vec<DataCarrier<SourceData<Vec<i32>, i32>, TargetData<Vec<i32>>>> {
     vec![
         DataCarrier::new(
-            SourceData::new(make_linked(vec![5,2,13,3,8]), 0),
+            SourceData::new(vec![5,2,13,3,8], 0),
             TargetData::new(vec![13,8]),
         ),
         DataCarrier::new(
-            SourceData::new(make_linked(vec![1,1,1,1]), 0),
+            SourceData::new(vec![1,1,1,1], 0),
             TargetData::new(vec![1, 1, 1, 1]),
         ),
     ]
@@ -40,13 +40,17 @@ fn data_set() -> Vec<DataCarrier<SourceData<Option<Box<ListNode>>, i32>, TargetD
 #[cfg(test)]
 mod test {
     use rust::medium::leetcode_2487::RemoveNodes;
-    use crate::medium::leetcode_2487::{data_set, output_linked};
+    use crate::medium::leetcode_2487::{data_set, make_linked, output_linked};
 
     #[test]
     fn case_one() {
         for data in data_set() {
+            let mut  value = data.source_data.value;
+            value.reverse();
+            let nodes = make_linked(value);
+
             assert_eq!(
-                output_linked(RemoveNodes::case_one(data.source_data.value)),
+                output_linked(RemoveNodes::case_one(nodes)),
                 data.target_data.value
             );
         }
