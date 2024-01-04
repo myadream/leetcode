@@ -16,6 +16,7 @@ impl<S, T> DataCarrier<S, T>
     }
 }
 
+#[derive(Debug)]
 pub struct SourceData<V, A>
 {
     pub value: V,
@@ -33,6 +34,7 @@ impl<V, A> SourceData<V, A>
     }
 }
 
+#[derive(Debug)]
 pub struct TargetData<V>
 {
     pub value: V,
