@@ -13,7 +13,6 @@ bench = false
 name = "alog"
 path = "tests/lib.rs"
 
-
 #[[bench]]
 #name = "corebenches"
 #path = "benches/lib.rs"

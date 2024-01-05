@@ -1,4 +1,4 @@
-package template
+package leetcode_5
 
 import (
 	"fmt"
@@ -12,47 +12,36 @@ func dataSet() []common.DataCarrier[common.DCDefault, common.TDefault] {
 
 	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
 		SourceData: common.DCDefault{
-			Value: "babad",
+			Value: []int{10, 6, 8, 5, 11, 9},
 		}, TargetData: common.TDefault{
-			Value: "aba",
+			Value: []int{3, 1, 2, 1, 1, 0},
 		},
 	})
 
 	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
 		SourceData: common.DCDefault{
-			Value: "cbbd",
+			Value: []int{5, 1, 2, 3, 10},
 		}, TargetData: common.TDefault{
-			Value: "bb",
+			Value: []int{4, 1, 1, 1, 0},
 		},
 	})
 
 	return dataSets
 }
 
-func handle(t *testing.T) []common.Processor[common.DCDefault, common.TDefault] {
-	var handle []common.Processor[common.DCDefault, common.TDefault]
-
-	handle = append(handle, common.Processor[common.DCDefault, common.TDefault]{
-		Fn: func(dataSet common.DCDefault, target common.TDefault) bool {
-			res := CaseOne(dataSet.Value.(string))
-			return assert.Equal(
-				t,
+func TestCaseOne(t *testing.T) {
+	for _, data := range dataSet() {
+		res := CaseOne(data.SourceData.Value.([]int))
+		assert.Equal(
+			t,
+			res,
+			data.TargetData.Value,
+			fmt.Sprintf(
+				"case one: dataSet: %v, target: %v, res: %v",
+				data,
+				data.TargetData.Value,
 				res,
-				target.Value.(string),
-				fmt.Sprintf(
-					"case one: dataSet: %v, target: %v, res: %v",
-					dataSet.Value.(string),
-					target,
-					res,
-				),
-			)
-		},
-	})
-
-	return handle
-}
-
-func Test(t *testing.T) {
-	test := common.DataFlowProcessor[common.DCDefault, common.TDefault]{}
-	test.ProcessData(handle(t), dataSet())
+			),
+		)
+	}
 }

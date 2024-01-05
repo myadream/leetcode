@@ -1,28 +1,23 @@
-package template
+package leetcode_5
 
 import "math"
 
-func CaseOne(s string) string {
-	if len(s) <= 0 || s == "" {
-		return ""
-	}
+func CaseOne(heights []int) []int {
+	sums := make([]int, len(heights))
+	stack := []int{math.MaxInt}
 
-	var start, end = 0, 0
-	for i := 0; i <= len(s); i++ {
-		l := expandAroundCenter(s, i, i)
-		r := expandAroundCenter(s, i, i+1)
-
-		strlen := math.Max()
-
-		if strlen > end-start {
-			start = i - (strlen-1)/2
-			end = i + strlen/2
+	for i := len(heights) - 1; i >= 0; i-- {
+		for stack[len(stack)-1] <= heights[i] {
+			stack = stack[:len(stack)-1]
+			sums[i] += 1
 		}
+
+		if len(stack) > 1 {
+			sums[i] += 1
+		}
+
+		stack = append(stack, heights[i])
 	}
 
-	return s[start:end]
-}
-
-func expandAroundCenter(s string, start, end int) (int, int) {
-
+	return sums
 }

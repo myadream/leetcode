@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b23ee77a-e684-4065-8cf4-2dffe9a3134b" name="Changes" comment="" />
+    <list default="true" id="b23ee77a-e684-4065-8cf4-2dffe9a3134b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/go/src/question/medium/leetcode_5/case_one.go" beforeDir="false" afterPath="$PROJECT_DIR$/go/src/question/medium/leetcode_5/case_one.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go/src/question/medium/leetcode_5/case_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/go/src/question/medium/leetcode_5/case_test.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,7 +20,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file://E:/cache/scoop/apps/go/current" />
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../../../cache/scoop/apps/go/current" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -32,30 +35,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;Go Test.Test in leetcode/src/question/easy/leetcode_415.executor&quot;: &quot;Run&quot;,
-    &quot;Go Test.TestIntersect in leetcode/src/question/easy/leetcode_350.executor&quot;: &quot;Run&quot;,
-    &quot;Go Test.TestLeetCode2415 in leetcode/src/question/medium/leetcode_2415.executor&quot;: &quot;Debug&quot;,
-    &quot;Go Test.TestLeetCode989 in leetcode/src/question/easy/leetcode_989.executor&quot;: &quot;Run&quot;,
-    &quot;Go Test.TestLeetcode43 in leetcode/src/question/medium/leetcode_43.executor&quot;: &quot;Run&quot;,
-    &quot;Go Test.TestLeetcode67 in leetcode/src/question/easy/leetcode_67.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/soft/github/base-algorithmus/go/src/question/easy/leetcode_989&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "Go Test.Test in leetcode/src/question/easy/leetcode_415.executor": "Run",
+    "Go Test.TestIntersect in leetcode/src/question/easy/leetcode_350.executor": "Run",
+    "Go Test.TestLeetCode2415 in leetcode/src/question/medium/leetcode_2415.executor": "Debug",
+    "Go Test.TestLeetCode989 in leetcode/src/question/easy/leetcode_989.executor": "Run",
+    "Go Test.TestLeetcode43 in leetcode/src/question/medium/leetcode_43.executor": "Run",
+    "Go Test.TestLeetcode67 in leetcode/src/question/easy/leetcode_67.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "E:/work/github/base-algorithmus/rust",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\soft\github\base-algorithmus\go\src\question\easy\leetcode_989" />
@@ -64,7 +68,7 @@
       <recent name="F:\soft\github\base-algorithmus\go\src\question\medium\leetcode_43" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestLeetCode989 in leetcode/src/question/easy/leetcode_989">
+  <component name="RunManager">
     <configuration name="Test in leetcode/src/question/easy/leetcode_415" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="base-algorithmus" />
       <working_directory value="$PROJECT_DIR$/go/src/question/easy/leetcode_415" />
@@ -125,15 +129,6 @@
       <pattern value="^\QTestLeetcode67\E$" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Go Test.TestLeetCode989 in leetcode/src/question/easy/leetcode_989" />
-        <item itemvalue="Go Test.TestIntersect in leetcode/src/question/easy/leetcode_350" />
-        <item itemvalue="Go Test.Test in leetcode/src/question/easy/leetcode_415" />
-        <item itemvalue="Go Test.TestLeetcode43 in leetcode/src/question/medium/leetcode_43" />
-        <item itemvalue="Go Test.TestLeetcode67 in leetcode/src/question/easy/leetcode_67" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -143,56 +138,20 @@
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <created>1704450144616</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704450144616</updated>
+      <workItem from="1704450145874" duration="49000" />
+    </task>
+    <servers />
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/go/src/question/medium/leetcode_2415/case_test.go</url>
-          <line>45</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/go/src/question/medium/leetcode_2415/case_test.go</url>
-          <line>37</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/go/src/question/medium/leetcode_2415/case_test.go</url>
-          <line>8</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/go/src/question/easy/leetcode_67/case_one.go</url>
-          <line>31</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/go/src/question/easy/leetcode_67/case_one.go</url>
-          <line>18</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/go/src/question/easy/leetcode_67/case_one.go</url>
-          <line>7</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/go/src/question/easy/leetcode_989/case_test.go</url>
-          <line>48</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/go/src/question/easy/leetcode_989/case_one.go</url>
-          <line>5</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
