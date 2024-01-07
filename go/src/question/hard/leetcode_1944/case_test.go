@@ -31,30 +31,6 @@ func dataSet() []common.DataCarrier[common.DCDefault, common.TDefault] {
 	return dataSets
 }
 
-func handle(t *testing.T) []common.Processor[common.DCDefault, common.TDefault] {
-	var handle []common.Processor[common.DCDefault, common.TDefault]
-
-	handle = append(handle, common.Processor[common.DCDefault, common.TDefault]{
-		Fn: func(dataSet common.DCDefault, target common.TDefault) bool {
-			res := CaseOne(dataSet.Value.([]int))
-			return assert.Equal(
-				t,
-				res,
-				target.Value.([]int),
-				fmt.Sprintf(
-					"case one: dataSet: %v, assist: %v, target: %v, res: %v",
-					dataSet.Value,
-					dataSet.Assist,
-					target,
-					res,
-				),
-			)
-		},
-	})
-
-	return handle
-}
-
 func TestCaseOne(t *testing.T) {
 	for _, data := range dataSet() {
 		res := CaseOne(data.SourceData.Value.([]int))
