@@ -21,7 +21,7 @@ func dataSet() []common.DataCarrier[common.DCDefault, common.TDefault] {
 
 	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
 		SourceData: common.DCDefault{
-			Value:  []int{1, 2, 2},
+			Value:  []int{4, 9, 5},
 			Assist: []int{9, 4, 9, 8, 4},
 		}, TargetData: common.TDefault{
 			Value: []int{9, 4},

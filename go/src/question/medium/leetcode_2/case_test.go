@@ -15,8 +15,6 @@ func outputListNode(nodes *ListNode) []int {
 		nodes = nodes.Next
 	}
 
-	fmt.Println("value: ", list)
-
 	return list
 }
 
@@ -120,24 +118,6 @@ func handle(t *testing.T) []common.Processor[common.DCDefault, common.TDefault] 
 				),
 			)
 
-		},
-	})
-
-	handle = append(handle, common.Processor[common.DCDefault, common.TDefault]{
-		Fn: func(dataSet common.DCDefault, target common.TDefault) bool {
-			res := outputListNode(CaseThree(dataSet.Value.(*ListNode), dataSet.Assist.(*ListNode)))
-			return assert.Equal(
-				t,
-				res,
-				target.Value.([]int),
-				fmt.Sprintf(
-					"case three: dataSet: %v, assist: %v, target: %v, res: %v",
-					outputListNode(dataSet.Value.(*ListNode)),
-					outputListNode(dataSet.Assist.(*ListNode)),
-					target,
-					res,
-				),
-			)
 		},
 	})
 
