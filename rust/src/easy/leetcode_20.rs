@@ -24,7 +24,7 @@ impl ValidParentheses {
                 stack.push_back('}')
             } else if word == '(' {
                 stack.push_back(')')
-            } else if stack.is_empty() || stack.back().unwrap() != word {
+            } else if stack.is_empty() || stack.{
                 return  false
             }
         }
