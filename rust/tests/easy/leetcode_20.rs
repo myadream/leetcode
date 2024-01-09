@@ -22,6 +22,14 @@ fn data_set() -> Vec<DataCarrier<SourceData<String, i32>, TargetData<bool>>> {
             SourceData::new(String::from("}"), 0),
             TargetData::new(false),
         ),
+        DataCarrier::new(
+            SourceData::new(String::from(")"), 0),
+            TargetData::new(false),
+        ),
+        DataCarrier::new(
+            SourceData::new(String::from("(("), 0),
+            TargetData::new(false),
+        ),
     ]
 }
 

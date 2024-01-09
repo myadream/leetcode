@@ -3,6 +3,10 @@ use crate::common::wrapper::{DataCarrier, SourceData, TargetData};
 fn data_set() -> Vec<DataCarrier<SourceData<String, String>, TargetData<bool>>> {
     vec![
         DataCarrier::new(
+            SourceData::new(String::from("aaaaa"), String::from("aaaaa")),
+            TargetData::new(true)
+        ),
+        DataCarrier::new(
             SourceData::new(String::from("a"), String::from("b")),
             TargetData::new(false)
         ),
@@ -12,12 +16,9 @@ fn data_set() -> Vec<DataCarrier<SourceData<String, String>, TargetData<bool>>> 
         ),
         DataCarrier::new(
             SourceData::new(String::from("aa"), String::from("aab")),
-            TargetData::new(false)
+            TargetData::new(true)
         ),
-        DataCarrier::new(
-            SourceData::new(String::from("aaaaa"), String::from("aaaaa")),
-            TargetData::new(false)
-        ),
+
     ]
 }
 
@@ -31,6 +32,16 @@ mod test {
         for data in data_set() {
             assert_eq!(
                 RansomNote::case_one(data.source_data.value, data.source_data.assist),
+                data.target_data.value
+            )
+        }
+    }
+
+    #[test]
+    fn case_two () {
+        for data in data_set() {
+            assert_eq!(
+                RansomNote::case_two(data.source_data.value, data.source_data.assist),
                 data.target_data.value
             )
         }

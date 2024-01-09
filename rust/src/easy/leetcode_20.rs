@@ -14,8 +14,11 @@ impl ValidParentheses {
     }
 
     pub fn case_two(s: String) -> bool {
-        let mut  stack: VecDeque<char> = VecDeque::new();
+        if s.len() <= 1 {
+            return false
+        }
 
+        let mut  stack: VecDeque<char> = VecDeque::new();
 
         for word in s.chars() {
             if word == '[' {
@@ -24,11 +27,11 @@ impl ValidParentheses {
                 stack.push_back('}')
             } else if word == '(' {
                 stack.push_back(')')
-            } else if stack.is_empty() || stack.{
+            } else if stack.is_empty() || stack.pop_back().unwrap() != word {
                 return  false
             }
         }
 
-        s.len() == 0
+        stack.is_empty()
     }
 }
