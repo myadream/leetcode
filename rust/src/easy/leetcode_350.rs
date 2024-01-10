@@ -32,6 +32,4 @@ impl IntersectionOfTwoArraysIi {
 
         ans
     }
-
-    pub fn case_two
 }

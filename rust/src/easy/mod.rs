@@ -10,3 +10,4 @@ pub mod leetcode_744;
 pub mod leetcode_20;
 pub mod leetcode_383;
 pub mod leetcode_350;
+pub mod leetcode_70;

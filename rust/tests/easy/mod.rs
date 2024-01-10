@@ -10,3 +10,4 @@ mod leetcode_744;
 mod leetcode_20;
 mod leetcode_383;
 mod leetcode_350;
+mod leetcode_70;
