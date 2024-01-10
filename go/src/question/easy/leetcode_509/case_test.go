@@ -12,10 +12,28 @@ func dataSet() []common.DataCarrier[common.DCDefault, common.TDefault] {
 
 	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
 		SourceData: common.DCDefault{
-			Value:  "11",
-			Assist: "1",
+			Value:  4,
+			Assist: nil,
 		}, TargetData: common.TDefault{
-			Value: "100",
+			Value: 3,
+		},
+	})
+
+	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
+		SourceData: common.DCDefault{
+			Value:  3,
+			Assist: nil,
+		}, TargetData: common.TDefault{
+			Value: 2,
+		},
+	})
+
+	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
+		SourceData: common.DCDefault{
+			Value:  2,
+			Assist: nil,
+		}, TargetData: common.TDefault{
+			Value: 1,
 		},
 	})
 
@@ -24,7 +42,7 @@ func dataSet() []common.DataCarrier[common.DCDefault, common.TDefault] {
 
 func TestCaseOne(t *testing.T) {
 	for _, data := range dataSet() {
-		res := caseOne(data.SourceData.Value.(string))
+		res := caseOne(data.SourceData.Value.(int))
 		assert.Equal(
 			t,
 			res,

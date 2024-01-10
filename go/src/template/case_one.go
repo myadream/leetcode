@@ -1,6 +1,6 @@
 package template
 
-func CaseOne(a string, b string) string {
+func caseOne(a string) string {
 
-	return ""
+	return a
 }
