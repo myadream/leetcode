@@ -9,9 +9,9 @@ func Max(a, b int) int {
 }
 
 func Min(a, b int) int {
-	if a > b {
-		return a
+	if a >= b {
+		return b
 	}
 
-	return b
+	return a
 }

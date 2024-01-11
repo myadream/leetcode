@@ -1,4 +1,4 @@
-package template
+package leetcode_746
 
 import (
 	"fmt"
@@ -12,46 +12,19 @@ func dataSet() []common.DataCarrier[common.DCDefault, common.TDefault] {
 
 	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
 		SourceData: common.DCDefault{
-			Value:  1,
+			Value:  []int{10, 15, 20},
 			Assist: nil,
 		}, TargetData: common.TDefault{
-			Value: 1,
+			Value: 15,
 		},
 	})
 
 	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
 		SourceData: common.DCDefault{
-			Value:  0,
+			Value:  []int{1, 100, 1, 1, 1, 100, 1, 1, 100, 1},
 			Assist: nil,
 		}, TargetData: common.TDefault{
-			Value: 0,
-		},
-	})
-
-	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
-		SourceData: common.DCDefault{
-			Value:  2,
-			Assist: nil,
-		}, TargetData: common.TDefault{
-			Value: 1,
-		},
-	})
-
-	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
-		SourceData: common.DCDefault{
-			Value:  3,
-			Assist: nil,
-		}, TargetData: common.TDefault{
-			Value: 2,
-		},
-	})
-
-	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
-		SourceData: common.DCDefault{
-			Value:  4,
-			Assist: nil,
-		}, TargetData: common.TDefault{
-			Value: 3,
+			Value: 6,
 		},
 	})
 
@@ -60,7 +33,7 @@ func dataSet() []common.DataCarrier[common.DCDefault, common.TDefault] {
 
 func TestCaseOne(t *testing.T) {
 	for _, data := range dataSet() {
-		res := caseOne(data.SourceData.Value.(int))
+		res := caseOne(data.SourceData.Value.([]int))
 		assert.Equal(
 			t,
 			res,
@@ -77,7 +50,7 @@ func TestCaseOne(t *testing.T) {
 
 func TestCaseTwo(t *testing.T) {
 	for _, data := range dataSet() {
-		res := caseTwo(data.SourceData.Value.(int))
+		res := caseTwo(data.SourceData.Value.([]int))
 		assert.Equal(
 			t,
 			res,
@@ -94,7 +67,7 @@ func TestCaseTwo(t *testing.T) {
 
 func TestCaseThree(t *testing.T) {
 	for _, data := range dataSet() {
-		res := caseThree(data.SourceData.Value.(int))
+		res := caseThree(data.SourceData.Value.([]int))
 		assert.Equal(
 			t,
 			res,
