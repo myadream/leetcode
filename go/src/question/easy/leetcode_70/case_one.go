@@ -1,4 +1,4 @@
-package template
+package leetcode_70
 
 func caseOne(n int) int {
 

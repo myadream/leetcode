@@ -1,4 +1,4 @@
-package template
+package leetcode_509
 
 import (
 	"fmt"

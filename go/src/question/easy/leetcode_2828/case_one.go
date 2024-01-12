@@ -1,4 +1,4 @@
-package template
+package leetcode_2828
 
 func CaseOne(words []string, s string) bool {
 	if len(words) != len(s) {

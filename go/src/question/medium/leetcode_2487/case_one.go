@@ -1,4 +1,4 @@
-package template
+package leetcode_2487
 
 type ListNode struct {
 	Val  int

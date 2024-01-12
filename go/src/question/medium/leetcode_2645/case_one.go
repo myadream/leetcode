@@ -1,4 +1,4 @@
-package template
+package leetcode_2645
 
 func caseOne(word string) int {
 	l := len(word)
