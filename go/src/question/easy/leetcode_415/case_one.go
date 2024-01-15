@@ -1,4 +1,4 @@
-package template
+package leetcode_415
 
 import (
 	"strconv"

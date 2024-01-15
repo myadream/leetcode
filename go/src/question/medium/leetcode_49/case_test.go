@@ -1,4 +1,4 @@
-package leetcode_509
+package leetcode_49
 
 import (
 	"fmt"
@@ -10,48 +10,39 @@ import (
 func dataSet() []common.DataCarrier[common.DCDefault, common.TDefault] {
 	var dataSets []common.DataCarrier[common.DCDefault, common.TDefault]
 
+	//dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
+	//	SourceData: common.DCDefault{
+	//		Value:  []string{"eat", "tea", "tan", "ate", "nat", "bat"},
+	//		Assist: nil,
+	//	}, TargetData: common.TDefault{
+	//		Value: [][]string{[]string{"bat"}, []string{"nat", "tan"}, []string{"ate", "eat", "tea"}},
+	//	},
+	//})
+
+	//dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
+	//	SourceData: common.DCDefault{
+	//		Value:  []string{"cab", "tin", "pew", "duh", "may", "ill", "buy", "bar", "max", "doc"},
+	//		Assist: nil,
+	//	}, TargetData: common.TDefault{
+	//		Value: [][]string{{"max"}, {"buy"}, {"doc"}, {"may"}, {"ill"}, {"duh"}, {"tin"}, {"bar"}, {"pew"}, {"cab"}},
+	//	},
+	//})
+	//
 	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
 		SourceData: common.DCDefault{
-			Value:  1,
+			Value:  []string{""},
 			Assist: nil,
 		}, TargetData: common.TDefault{
-			Value: 1,
+			Value: [][]string{{""}},
 		},
 	})
 
 	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
 		SourceData: common.DCDefault{
-			Value:  0,
+			Value:  []string{"a"},
 			Assist: nil,
 		}, TargetData: common.TDefault{
-			Value: 0,
-		},
-	})
-
-	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
-		SourceData: common.DCDefault{
-			Value:  2,
-			Assist: nil,
-		}, TargetData: common.TDefault{
-			Value: 1,
-		},
-	})
-
-	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
-		SourceData: common.DCDefault{
-			Value:  3,
-			Assist: nil,
-		}, TargetData: common.TDefault{
-			Value: 2,
-		},
-	})
-
-	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
-		SourceData: common.DCDefault{
-			Value:  4,
-			Assist: nil,
-		}, TargetData: common.TDefault{
-			Value: 3,
+			Value: [][]string{{"a"}},
 		},
 	})
 
@@ -60,7 +51,7 @@ func dataSet() []common.DataCarrier[common.DCDefault, common.TDefault] {
 
 func TestCaseOne(t *testing.T) {
 	for _, data := range dataSet() {
-		res := caseOne(data.SourceData.Value.(int))
+		res := caseOne(data.SourceData.Value.([]string))
 		assert.Equal(
 			t,
 			res,
@@ -77,25 +68,8 @@ func TestCaseOne(t *testing.T) {
 
 func TestCaseTwo(t *testing.T) {
 	for _, data := range dataSet() {
-		res := caseTwo(data.SourceData.Value.(int))
-		assert.Equal(
-			t,
-			res,
-			data.TargetData.Value,
-			fmt.Sprintf(
-				"case one: dataSet: %v, target: %v, res: %v",
-				data,
-				data.TargetData.Value,
-				res,
-			),
-		)
-	}
-}
-
-func TestCaseThree(t *testing.T) {
-	for _, data := range dataSet() {
-		res := caseThree(data.SourceData.Value.(int))
-		assert.Equal(
+		res := caseOne(data.SourceData.Value.([]string))
+		assert.EqualValuesf(
 			t,
 			res,
 			data.TargetData.Value,

@@ -1,4 +1,4 @@
-package leetcode_1944
+package leetcode_1768
 
 import (
 	"fmt"
@@ -12,19 +12,28 @@ func dataSet() []common.DataCarrier[common.DCDefault, common.TDefault] {
 
 	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
 		SourceData: common.DCDefault{
-			Value:  []int{10, 6, 8, 5, 11, 9},
-			Assist: nil,
+			Value:  "abc",
+			Assist: "pqr",
 		}, TargetData: common.TDefault{
-			Value: []int{3, 1, 2, 1, 1, 0},
+			Value: "apbqcr",
 		},
 	})
 
 	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
 		SourceData: common.DCDefault{
-			Value:  []int{5, 1, 2, 3, 10},
-			Assist: nil,
+			Value:  "ab",
+			Assist: "pqrs",
 		}, TargetData: common.TDefault{
-			Value: []int{4, 1, 1, 1, 0},
+			Value: "apbqrs",
+		},
+	})
+
+	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
+		SourceData: common.DCDefault{
+			Value:  "abcd",
+			Assist: "pq",
+		}, TargetData: common.TDefault{
+			Value: "apbqcd",
 		},
 	})
 
@@ -33,7 +42,24 @@ func dataSet() []common.DataCarrier[common.DCDefault, common.TDefault] {
 
 func TestCaseOne(t *testing.T) {
 	for _, data := range dataSet() {
-		res := CaseOne(data.SourceData.Value.([]int))
+		res := caseOne(data.SourceData.Value.(string), data.SourceData.Assist.(string))
+		assert.Equal(
+			t,
+			res,
+			data.TargetData.Value,
+			fmt.Sprintf(
+				"case one: dataSet: %v, target: %v, res: %v",
+				data,
+				data.TargetData.Value,
+				res,
+			),
+		)
+	}
+}
+
+func TestCaseTwo(t *testing.T) {
+	for _, data := range dataSet() {
+		res := caseTwo(data.SourceData.Value.(string), data.SourceData.Assist.(string))
 		assert.Equal(
 			t,
 			res,

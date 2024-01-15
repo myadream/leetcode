@@ -1,4 +1,4 @@
-package template
+package leetcode_744
 
 func CaseOne(letters []byte, target byte) byte {
 	res := letters[0]

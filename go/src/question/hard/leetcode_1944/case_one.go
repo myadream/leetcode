@@ -1,4 +1,4 @@
-package template
+package leetcode_1944
 
 import "math"
 
