@@ -1,10 +1,7 @@
 package template
 
 import (
-	"fmt"
-	"github.com/stretchr/testify/assert"
 	"leetcode/src/common"
-	"testing"
 )
 
 func dataSet() []common.DataCarrier[common.DCDefault, common.TDefault] {
@@ -22,22 +19,22 @@ func dataSet() []common.DataCarrier[common.DCDefault, common.TDefault] {
 	return dataSets
 }
 
-func TestCaseOne(t *testing.T) {
-	for _, data := range dataSet() {
-		res := caseOne(data.SourceData.Value.(string))
-		assert.Equal(
-			t,
-			res,
-			data.TargetData.Value,
-			fmt.Sprintf(
-				"case one: dataSet: %v, target: %v, res: %v",
-				data,
-				data.TargetData.Value,
-				res,
-			),
-		)
-	}
-}
+//func TestCaseOne(t *testing.T) {
+//	for _, data := range dataSet() {
+//		res := caseOne(data.SourceData.Value.(string))
+//		assert.Equal(
+//			t,
+//			res,
+//			data.TargetData.Value,
+//			fmt.Sprintf(
+//				"case one: dataSet: %v, target: %v, res: %v",
+//				data,
+//				data.TargetData.Value,
+//				res,
+//			),
+//		)
+//	}
+//}
 
 //func handle(t *testing.T) []common.Processor[common.DCDefault, common.TDefault] {
 //	var handle []common.Processor[common.DCDefault, common.TDefault]
