@@ -1,4 +1,4 @@
-package template
+package leetcode_128
 
 func caseOne(nums []int) int {
 

@@ -1,4 +1,4 @@
-package leetcode_128
+package leetcode_15
 
 import (
 	"fmt"
@@ -12,19 +12,28 @@ func dataSet() []common.DataCarrier[common.DCDefault, common.TDefault] {
 
 	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
 		SourceData: common.DCDefault{
-			Value:  []int{0, 3, 7, 2, 5, 8, 4, 6, 0, 1},
+			Value:  []int{-1, 0, 1, 2, -1, -4},
 			Assist: nil,
 		}, TargetData: common.TDefault{
-			Value: 9,
+			Value: [][]int{{-1, -1, 2}, {-1, 0, 1}},
 		},
 	})
 
 	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
 		SourceData: common.DCDefault{
-			Value:  []int{100, 4, 200, 1, 3, 2},
+			Value:  []int{0, 1, 1},
 			Assist: nil,
 		}, TargetData: common.TDefault{
-			Value: 4,
+			Value: [][]int{},
+		},
+	})
+
+	dataSets = append(dataSets, common.DataCarrier[common.DCDefault, common.TDefault]{
+		SourceData: common.DCDefault{
+			Value:  []int{0, 0, 0},
+			Assist: nil,
+		}, TargetData: common.TDefault{
+			Value: [][]int{{0, 0, 0}},
 		},
 	})
 
