@@ -45,7 +45,7 @@ func handle(t *testing.T) []common.Processor[common.DCDefault, common.TDefault] 
 
 	handle = append(handle, common.Processor[common.DCDefault, common.TDefault]{
 		Fn: func(dataSet common.DCDefault, target common.TDefault) bool {
-			res := CaseOne(dataSet.Value.(string), dataSet.Assist.(string))
+			res := caseOne(dataSet.Value.(string), dataSet.Assist.(string))
 			return assert.Equal(
 				t,
 				res,

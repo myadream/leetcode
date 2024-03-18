@@ -44,14 +44,6 @@ type DataFlowProcessorInterface[P SourceData, T TargetData] interface {
 func (c DataFlowProcessor[P, T]) ProcessData(processors []Processor[P, T], dataCarriers []DataCarrier[P, T]) interface{} {
 
 	channels := make(chan int)
-	carriers := make([]DataCarrier[P, T], len(processors))
-	for i := 0; i < len(dataCarriers); i++ {
-
-	}
-	if err := copier.Copy(&carriers, &dataCarriers); err != nil {
-		panic(err)
-	}
-
 	for index, processor := range processors {
 
 		go func(processor Processor[P, T], carriers []DataCarrier[P, T], index int) {
@@ -60,13 +52,13 @@ func (c DataFlowProcessor[P, T]) ProcessData(processors []Processor[P, T], dataC
 				if err := copier.Copy(&carrierCopy, &carrier); err != nil {
 					panic(err)
 				}
-				if !processor.Fn(carrier.SourceData, carrier.TargetData) {
+				if !processor.Fn(carrierCopy.SourceData, carrierCopy.TargetData) {
 					break
 				}
 			}
 
 			channels <- index
-		}(processor, carriers, index)
+		}(processor, dataCarriers, index)
 	}
 
 	for i := 0; i < len(processors); i++ {

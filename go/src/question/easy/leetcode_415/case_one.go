@@ -4,7 +4,7 @@ import (
 	"strconv"
 )
 
-func CaseOne(num1 string, num2 string) string {
+func caseOne(num1 string, num2 string) string {
 	sum := 0
 	total := ""
 	for l, r := len(num1), len(num2); l > 0 || r > 0 || sum != 0; {
