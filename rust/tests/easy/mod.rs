@@ -12,3 +12,5 @@ mod leetcode_383;
 mod leetcode_350;
 mod leetcode_70;
 mod leetcode_509;
+mod leetcode_25;
+mod leetcode_26;
